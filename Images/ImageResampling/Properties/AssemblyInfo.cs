@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ImageResampling")]
-[assembly: AssemblyCopyright("Copyright ©  2008-2010")]
+[assembly: AssemblyCopyright("Copyright © 2008-2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

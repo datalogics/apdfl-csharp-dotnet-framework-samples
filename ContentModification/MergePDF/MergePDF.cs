@@ -8,10 +8,7 @@ using System.Collections.Generic;
  * prompts the user to enter the names of two PDF files, and then inserts the content 
  * of the second PDF file into the first PDF file and saves the result in a third PDF file.
  *
- * Copyright (c) 2007-2021, Datalogics, Inc. All rights reserved.
- *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
  */
 
@@ -41,17 +38,6 @@ namespace MergePDF
 
                 if (args.Length > 2)
                     sOutput = args[2];
-
-                // Issue 1: merge_pdf2.pdf has no attachment or embedded files. Using 
-                // doc1.Attachments results in "The document doesn't contain a EmbeddedFiles dictionary" exception
-                // which then has to be handled.  Shouldn't it just return a 0 length IList?  
-                // Or perhaps DLE should have methods that return the # of attachements 
-                // (e.g. Document.numAttachments and Document.numAnnotationAttachments))
-                // so that the application can check first?
-                
-                // Issue 2: attachments.pdf has contains 2 attachments, one regular, one attached to an annotation.
-                //   Acrobat lists both, but doc1.Attachments only retrieves 1. 
-                // 
 
                 using (Document doc1 = new Document(sInput1))
                 {

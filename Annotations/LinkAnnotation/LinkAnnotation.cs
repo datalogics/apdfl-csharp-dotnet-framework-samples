@@ -7,14 +7,8 @@ using Datalogics.PDFL;
  * 
  * This program creates a PDF file with an embedded hyperlink, which takes the reader to the second page of the document.
  * 
- * For more detail see the description of the LinkAnnotation sample program on our Developer’s site, 
- * http://dev.datalogics.com/adobe-pdf-library/sample-program-descriptions/net-sample-programs/working-with-annotations#linkannotation
- * 
  *
- * Copyright (c) 2007-2017, Datalogics, Inc. All rights reserved.
- *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
  */
 namespace LinkAnnotations

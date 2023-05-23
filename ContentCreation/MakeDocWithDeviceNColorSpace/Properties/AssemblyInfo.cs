@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Datalogics, Incorporated")]
 [assembly: AssemblyProduct("MakeDocWithDeviceNColorSpace")]
-[assembly: AssemblyCopyright("Copyright © Datalogics, Incorporated 2008-2010")]
+[assembly: AssemblyCopyright("Copyright © Datalogics, Incorporated 2008-2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

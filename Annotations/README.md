@@ -1,14 +1,14 @@
-## ***Annotations***
+## Annotations
 Collects annotations from a PDF page.
 
-## ***InkAnnotations***
+## InkAnnotations
 Creates an ink annotation on a PDF page.
 
-## ***LinkAnnotation***
+## LinkAnnotation
 Creates a link annotation on a PDF page that navigates the user to another PDF page when clicked.
 
-## ***PolyLineAnnotations***
+## PolyLineAnnotations
 Creates a polyline annotation on a PDF page.
 
-## ***PolygonAnnotations***
+## PolygonAnnotations
 Creates a polygon annotation on a PDF page.

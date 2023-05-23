@@ -10,19 +10,14 @@ using Datalogics.PDFL;
 using System.Text;
 
 /*
- * Copyright (c) 2007-2013, Datalogics, Inc. All rights reserved.
- *
- * The information and code in this sample is for the exclusive use of Datalogics
- * customers and evaluation users only.  Datalogics permits you to use, modify and
- * distribute this file in accordance with the terms of your license agreement.
- * Sample code is for demonstrative purposes only and is not intended for production use.
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved..
  *
  * ============================ PDF OBJECT EXPLORER ===================================
  * Demonstrates a GUI-based browser for PDF objects, letting the user examine a PDF at
  * the level of dictionaries, streams, and simple datatypes like strings and integers.
  * This sample serves two purposes:
  *
- * 1) It demonstrates how to use the PDFObject API in DLE, including features like
+ * 1) It demonstrates how to use the PDFObject API, including
  *    the PDFObjectEnumProc callback
  *
  * 2) It can also be built and run 'out of the box' as a tool for inspecting PDF

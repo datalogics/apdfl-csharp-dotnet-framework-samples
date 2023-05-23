@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LinkAnnotation")]
-[assembly: AssemblyCopyright("Copyright ©  2008-2010 Datalogics, Inc.")]
+[assembly: AssemblyCopyright("Copyright ©  2008-2023 Datalogics, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

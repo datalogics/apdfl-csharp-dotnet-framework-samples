@@ -7,13 +7,7 @@ using Datalogics.PDFL;
  * The sample uses an image as input which will be processed by the optical recognition engine.
  * We will then place the image and the processed text in an output pdf
  * 
- * For more detail see the description of AddTextToImage, on our Developers site, 
- * https://dev.datalogics.com/adobe-pdf-library/sample-program-descriptions/net-sample-programs/optical-character-recognition/
- * 
- * Copyright (c) 2007-2019, Datalogics, Inc. All rights reserved.
- *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
  */
 

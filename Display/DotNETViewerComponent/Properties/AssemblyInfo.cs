@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Datalogics")]
 [assembly: AssemblyProduct("DotNETViewerComponent")]
-[assembly: AssemblyCopyright("Copyright © Datalogics 2009")]
+[assembly: AssemblyCopyright("Copyright © Datalogics 2009-2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

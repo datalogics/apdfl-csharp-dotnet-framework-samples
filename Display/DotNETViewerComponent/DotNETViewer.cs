@@ -1,15 +1,13 @@
 /*
- * Copyright (c) 2007-2017, Datalogics, Inc. All rights reserved.
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
 */
 
 /*
  * DotNETViewer.cs
  * 
  * DotNETViewer is a User Control that can be added to an existing application from
- * the toolbox in visual studio. It provides a graphical user interface for users
+ * the toolbox in Visual Studio. It provides a graphical user interface for users
  * to view/edit PDFs.
  * 
  *  Featues :

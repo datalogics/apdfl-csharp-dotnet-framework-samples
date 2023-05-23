@@ -6,14 +6,8 @@ using Datalogics.PDFL;
 /*
  * Demonstrates working with the Calibrated Gray Space (CaLGray), based on the CIE color space.
  *
- * Copyright (c) 2007-2017, Datalogics, Inc. All rights reserved.
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  * 
- * For more detail see the description of the ColorSpace sample programs on our Developer’s site, 
- * http://dev.datalogics.com/adobe-pdf-library/sample-program-descriptions/net-sample-programs/getting-pdf-documents-using-color-spaces
- *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
- *
  */
 
 namespace MakeDocWithCalGrayColorSpace

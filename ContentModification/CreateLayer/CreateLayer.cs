@@ -10,14 +10,9 @@ using Datalogics.PDFL;
  * The related ChangeLayerConfiguration program makes layers visible or invisible.
  * 
  * You can toggle back and forth to make the layer (the duck image) visible or invisible
- * in the PDF file. Open the output PDF document in Adobe Acrobat, click View and select
+ * in the PDF file. Open the output PDF document in a PDF Viewer, click View and select
  * Show/Hide. Select Navigation Panes and Layers to display the layers in the PDF file. 
  * Click on the box next to the name of the layer.
- *
- * Copyright (c) 2007-2017, Datalogics, Inc. All rights reserved.
- *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
  *
  */
 namespace CreateLayer
@@ -87,7 +82,7 @@ namespace CreateLayer
             OptionalContentGroup ocg = new OptionalContentGroup(doc, name);
 
             // Add it to the Order array -- this is required so that the OptionalContentGroup
-            // will appear in the 'Layers' control panel in Acrobat.  It will appear in
+            // will appear in the 'Layers' control panel in a PDF Viewer.  It will appear in
             // the control panel with the name given in the OptionalContentGroup constructor.
             OptionalContentOrderArray order_list = doc.DefaultOptionalContentConfig.Order;
             order_list.Insert(order_list.Length, new OptionalContentOrderLeaf(ocg));

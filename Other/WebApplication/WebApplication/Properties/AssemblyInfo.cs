@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Datalogics, Inc.")]
 [assembly: AssemblyProduct("WebApplication")]
-[assembly: AssemblyCopyright("Copyright © 2012 Datalogics, Inc.")]
+[assembly: AssemblyCopyright("Copyright © 2012-2023 Datalogics, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

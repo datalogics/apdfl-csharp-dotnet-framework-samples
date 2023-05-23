@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Datalogics, Inc.")]
 [assembly: AssemblyProduct("ListPaths")]
-[assembly: AssemblyCopyright("Copyright © Datalogics 2011")]
+[assembly: AssemblyCopyright("Copyright © Datalogics 2011-2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
