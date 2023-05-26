@@ -62,7 +62,7 @@ namespace DisplayPDF
                         PDFDoc.Dispose();
                     }
                     PDFDoc = new Document(FileName);
-                    DisplayPDFForm.ActiveForm.Text = "DLE Viewer - " + FileName;
+                    DisplayPDFForm.ActiveForm.Text = "Display PDF - " + FileName;
                     maxpages = PDFDoc.NumPages;
                     currentPDPagenum = 0;
                     scalefactor = 1.0;

@@ -8,7 +8,7 @@ using Datalogics.PDFL;
  * This sample shows how to redact a PDF document. The program opens an input PDF, searches for
  * specific words using the Adobe PDF Library WordFinder, and then removes these words from the text.
  * 
- * Copyright (c) 2007-203, Datalogics, Inc. All rights reserved.
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
  */
 namespace Redactions
@@ -39,9 +39,6 @@ namespace Redactions
                 // Redact occurrences of the word "cloudy" on the page, changing the display details.
                 //
                 // For a more in-depth example of using the WordFinder, see the TextExtract sample.
-                //
-                // The TextExtract sample is described here.
-                // http://dev.datalogics.com/adobe-pdf-library/sample-program-descriptions/net-sample-programs/extracting-text-from-pdf-files
                 //
 
                 List<Quad> cloudyQuads = new List<Quad>();

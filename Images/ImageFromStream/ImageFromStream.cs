@@ -52,15 +52,15 @@ namespace ImageFromStream
                 System.Drawing.Bitmap BitmapImage = new System.Drawing.Bitmap(bitmapInput);
                 BitmapImage.Save(BitmapStream, System.Drawing.Imaging.ImageFormat.Bmp);
 
-                // Reset the MemoryStream's seek position before handing it to the DLE API, 
+                // Reset the MemoryStream's seek position before handing it to the PDFL,
                 // which expects the seek position to be at the beginning of the stream.
                 BitmapStream.Seek(0, System.IO.SeekOrigin.Begin);
 
-                // Create the DLE Image object.
-                Datalogics.PDFL.Image DLEBitmapImage = new Datalogics.PDFL.Image(BitmapStream);
+                // Create the Image object.
+                Datalogics.PDFL.Image BitmapImage = new Datalogics.PDFL.Image(BitmapStream);
 
                 // Save the image to a PNG file.
-                DLEBitmapImage.Save("ImageFromStream-out.png", ImageType.PNG);
+                BitmapImage.Save("ImageFromStream-out.png", ImageType.PNG);
 
                 // The following demonstrates reading an image from a Stream and placing it into a document.
                 // First, create a new Document and add a Page to it.
@@ -77,12 +77,12 @@ namespace ImageFromStream
                 // An alternative method for resetting the MemoryStream's seek position.
                 JpegStream.Position = 0;
 
-                // Create the DLE Image object and put it in the Document.
+                // Create the Image object and put it in the Document.
                 // Since the image will be placed in a Document, use the constructor with the optional 
                 // Document parameter to optimize data usage for this image within the Document.
-                Datalogics.PDFL.Image DLEJpegImage = new Datalogics.PDFL.Image(JpegStream, doc);
+                Datalogics.PDFL.Image JpegImage = new Datalogics.PDFL.Image(JpegStream, doc);
                 Page pg = doc.GetPage(0);
-                pg.Content.AddElement(DLEJpegImage);
+                pg.Content.AddElement(JpegImage);
                 pg.UpdateContent();
                 doc.Save(SaveFlags.Full, docOutput);
             }

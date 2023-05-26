@@ -57,7 +57,7 @@ namespace FlattenTransparency
                 if(isTransparent)
                 {
                     // Flattening the document will check each page for transparency.
-                    // If a page has transparency, DLE will create a new, flattened
+                    // If a page has transparency, it will create a new, flattened
                     // version of the page and replace the original page with the
                     // new one.  Because of this, make sure to dispose of outstanding Page objects
                     // that refer to pages in the Document before calling flattenTransparency.

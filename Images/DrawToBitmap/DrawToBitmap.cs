@@ -26,9 +26,9 @@ namespace DrawToBitmap
     {
         /// <summary>
         /// The method implements a callback (it MUST be named "Call", return a bool and take no arguments)
-        /// It will be driven by DLE and if the method returns true rendering will attempt to cancel.
+        /// It will be driven by PDFL and if the method returns true rendering will attempt to cancel.
         /// </summary>
-        /// <returns>A boolean that tells DLE to continue (false) or cancel (true)</returns>
+        /// <returns>A boolean that tells PDFL to continue (false) or cancel (true)</returns>
         public override bool Call()
         {
             mSomeBoolean = ((mSomeBoolean) ? false : true);
@@ -47,7 +47,7 @@ namespace DrawToBitmap
     {
         /// <summary>
         /// The method implements a callback (it MUST be named "Call" and exhibit the method signature described)
-        /// It will be driven by DLE and provide data that can be used to update a progress bar, etc.
+        /// It will be driven by PDFL and provide data that can be used to update a progress bar, etc.
         /// </summary>
         /// <param name="stagePercent">A percentage complete (of the stage!). Values will always be in the range of 0.0 (0%) to 1.0 (100%)</param>
         /// <param name="info">A string that will present optional information that may be written to user interface</param>
