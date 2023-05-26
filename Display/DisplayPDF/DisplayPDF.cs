@@ -5,12 +5,9 @@ using Datalogics.PDFL;
 
 /*
  * This sample shows how to open a PDF document, search for text in the pages and highlight
- * the text using the C# drawing library. DisplayPDF is a simpler version of the DotNETViewer sample.
+ * the text. DisplayPDF is a simpler version of the DotNETViewer sample.
  * 
- * Copyright (c) 2007-2017, Datalogics, Inc. All rights reserved.
- *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
  */
 

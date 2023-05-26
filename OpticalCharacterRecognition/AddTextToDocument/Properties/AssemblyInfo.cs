@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Datalogics, Inc.")]
 [assembly: AssemblyProduct("AddTextToDocument")]
-[assembly: AssemblyCopyright("Copyright © Datalogics 2019")]
+[assembly: AssemblyCopyright("Copyright © Datalogics 2019-2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

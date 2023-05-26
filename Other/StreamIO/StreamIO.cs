@@ -15,13 +15,7 @@ using Datalogics.PDFL;
  * 
  * This program is similar to ImagefromStream, but in this example the PDF file streams hold text.
  *
- * For more detail see the description of the StreamIO sample program on our Developer’s site, 
- * http://dev.datalogics.com/adobe-pdf-library/sample-program-descriptions/net-sample-programs/exporting-images-from-pdf-files/#streamio
- * 
- * Copyright (c) 2007-2017, Datalogics, Inc. All rights reserved.
- *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
  */
 namespace StreamIO

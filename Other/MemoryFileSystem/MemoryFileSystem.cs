@@ -12,10 +12,7 @@ using Datalogics.PDFL;
  * TempStoreType.Memory. The program can also set a maximum amount of RAM to use by
  * applying a value to the DefaultTempStoreMemLimit property.
  *
- * Copyright (c) 2007-2017, Datalogics, Inc. All rights reserved.
- *
- * For complete copyright information, refer to:
- * http://dev.datalogics.com/adobe-pdf-library/license-for-downloaded-pdf-samples/
+ * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
  */
 namespace MemoryFileSystem
