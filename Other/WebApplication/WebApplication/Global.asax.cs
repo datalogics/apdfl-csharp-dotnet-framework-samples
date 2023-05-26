@@ -38,7 +38,7 @@ namespace WebApplication
             Environment.SetEnvironmentVariable(@"PATH", path, EnvironmentVariableTarget.Process);
             
             //
-            // Initialize DLE
+            // Initialize Library
             //
             // Library initialization is actually (best employed as) a two phase process. If one inits at web application start/end 
             // some expensive, low level, *one time/per process* only setup occurs. That makes the secondary, high level initialization 
