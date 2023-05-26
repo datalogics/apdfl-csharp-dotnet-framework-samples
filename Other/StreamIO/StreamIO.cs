@@ -53,7 +53,7 @@ namespace StreamIO
 				d.Save(SaveFlags.Full, output);
 
 				// Make another minor change.
-				d.Creator = "DLE StreamIO Sample";
+				d.Creator = "StreamIO Sample";
 
 				// Since the document is now backed by a file, an incremental save is okay.
 				d.Save(SaveFlags.Incremental);
@@ -71,7 +71,7 @@ namespace StreamIO
             using (Document d = new Document())
             {
                 // Add some content to the Document so there will be something to see.
-                d.Creator = "DLE StreamIO Sample";
+                d.Creator = "StreamIO Sample";
                 Page p = d.CreatePage(Document.BeforeFirstPage, new Rect(0, 0, 612, 792));
                 AddContentToPage(p);
 

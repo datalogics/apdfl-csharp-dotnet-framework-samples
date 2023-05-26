@@ -14,14 +14,14 @@ namespace WebApplication
 {
     public class Global : System.Web.HttpApplication
     {
-        private Library mDLE = null;
+        private Library mLibrary = null;
         
         void Application_Start(object sender, EventArgs e)
         {   // Code that runs on application startup
             
             //
             // Set/Export (at runtime) DLPath to the system environment variable PATH
-            // Use of DLE will NOT work in a secure IIS environment without the following!
+            // Use of PDFL will NOT work in a secure IIS environment without the following!
             // 
             // See Also: Shadow Copy (as it relates to web hosted solutions like ASP.Net, WCF, etc.)
             //  http://msdn.microsoft.com/en-us/library/ms404279.aspx
@@ -38,23 +38,22 @@ namespace WebApplication
             Environment.SetEnvironmentVariable(@"PATH", path, EnvironmentVariableTarget.Process);
             
             //
-            // Initialize DLE...
+            // Initialize Library
             //
             // Library initialization is actually (best employed as) a two phase process. If one inits at web application start/end 
             // some expensive, low level, *one time/per process* only setup occurs. That makes the secondary, high level initialization 
             // at Page_Load time faster. This, in turn, will improve per GET/POST performance.
             //
             
-            mDLE = new Library();
+            mLibrary = new Library();
         }
         
         void Application_End(object sender, EventArgs e)
         {   //  Code that runs on application shutdown
-            if (mDLE != null)
+            if (mLibrary != null)
             {
-                mDLE.Terminate();
-                mDLE.Dispose();
-                mDLE = null;
+                mLibrary.Dispose();
+                mLibrary = null;
             }
         }
         

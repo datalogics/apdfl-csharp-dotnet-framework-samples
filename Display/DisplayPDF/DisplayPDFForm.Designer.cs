@@ -159,7 +159,7 @@ namespace DisplayPDF
             this.mainToolStrip.Size = new System.Drawing.Size(726, 25);
             this.mainToolStrip.Stretch = true;
             this.mainToolStrip.TabIndex = 19;
-            this.mainToolStrip.Text = "DLE Viewer Tool Strip";
+            this.mainToolStrip.Text = "Display PDF Tool Strip";
             // 
             // openToolStripButton
             // 

@@ -22,10 +22,8 @@ namespace WebApplication
 {
     //
     // This sample opens a XML Paper Specification (XPS) document and converts it to 
-    // a Portable Document Format (PDF) document. You'll find the XPS samples here:
-    //
-    //  http://msdn.microsoft.com/en-us/windows/hardware/gg463429.aspx
-    //
+    // a Portable Document Format (PDF) document.
+	//
     // Once open, it saves the PDF along side the XPS source document (within <XPSPath>\) 
     // as <XPSFile>.pdf. In the event duplicate PDFs are made (e.g., page refresh, 
     // multiple runs of the solution, etc.), subsequent PDFs are renamed to <XPSFile>.#.pdf 
@@ -62,11 +60,6 @@ namespace WebApplication
         //
         // srcXPSFilePath points to one of Microsoft's XPS reference samples (feel free to point it at (essentially) any XPS file)
         //
-        // Those samples are available (circa 2012) here...
-        //  http://msdn.microsoft.com/en-us/windows/hardware/gg463429.aspx
-        //
-        // For more information about XPS consult Microsoft's documentation here...
-        //  http://msdn.microsoft.com/en-us/library/dd316975%28VS.85%29.aspx
         //
 
         private readonly string srcXPSFilePath = String.Format("{0}{2}{1}", ConfigurationManager.AppSettings[@"XPSPath"], ConfigurationManager.AppSettings[@"XPSFile"], IOPath.DirectorySeparatorChar);

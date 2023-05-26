@@ -8,10 +8,7 @@ using Datalogics.PDFL;
  * 
  * This sample creates and adds a new Ink annotation to a PDF document. An Ink annotation is a freeform line,
  * similar to what you would create with a pen, or with a stylus on a mobile device.
- *
- * For more detail see the description of the InkAnnotations sample program on our Developer’s site, 
- * http://dev.datalogics.com/adobe-pdf-library/sample-program-descriptions/net-sample-programs/working-with-annotations#inkannotations
- *  
+ * 
  * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
  */

@@ -192,7 +192,7 @@ namespace RasterizePage
         {
             // Create a PageImageParams with the default settings and set
             // the color space as appropriate.
-            // We'll let DLE decide the final pixel dimensions of
+            // We'll let PDFL decide the final pixel dimensions of
             // the bitmap, so we won't change these settings from the default.
 
             PageImageParams pip = new PageImageParams();
