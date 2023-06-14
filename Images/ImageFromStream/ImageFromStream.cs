@@ -49,8 +49,8 @@ namespace ImageFromStream
                 System.IO.MemoryStream BitmapStream = new System.IO.MemoryStream();
 
                 // Load a bitmap image into the MemoryStream.
-                System.Drawing.Bitmap BitmapImage = new System.Drawing.Bitmap(bitmapInput);
-                BitmapImage.Save(BitmapStream, System.Drawing.Imaging.ImageFormat.Bmp);
+                System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(bitmapInput);
+                bitmap.Save(BitmapStream, System.Drawing.Imaging.ImageFormat.Bmp);
 
                 // Reset the MemoryStream's seek position before handing it to the PDFL,
                 // which expects the seek position to be at the beginning of the stream.
@@ -71,8 +71,8 @@ namespace ImageFromStream
                 System.IO.MemoryStream JpegStream = new System.IO.MemoryStream();
 
                 // Load a JPEG image into the MemoryStream.
-                System.Drawing.Image JpegImage = System.Drawing.Image.FromFile(jpegInput);
-                JpegImage.Save(JpegStream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                System.Drawing.Image JpegNetImage = System.Drawing.Image.FromFile(jpegInput);
+                JpegNetImage.Save(JpegStream, System.Drawing.Imaging.ImageFormat.Jpeg);
 
                 // An alternative method for resetting the MemoryStream's seek position.
                 JpegStream.Position = 0;
