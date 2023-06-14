@@ -162,7 +162,17 @@ namespace Actions
 
                 foreach (SeparationPlate p in plates)
                 {
-                   p.EPSOutput.Close();
+                    bool emptyFile = false;
+                    if (p.EPSOutput.Length == 0)
+                    {
+                        emptyFile = true;
+                    }
+
+                    p.EPSOutput.Close();
+                    if (emptyFile)
+                    {
+                        System.IO.File.Delete("Complex-Pg" + (pgNum + 1) + "-" + p.ColorantName + ".eps");
+                    }
                 }
             }
         }
