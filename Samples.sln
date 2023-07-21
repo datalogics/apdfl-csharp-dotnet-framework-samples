@@ -88,6 +88,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPSSeparations", "Images\EP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSeparatedImages", "Images\GetSeparatedImages\GetSeparatedImages.csproj", "{16ABC796-99B8-AEC6-947E-3355E8E6B090}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputPreview", "Images\OutputPreview\OutputPreview.csproj", "{7B383C18-C183-4549-A5BF-CC488A08DF52}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageEmbedICCProfile", "Images\ImageEmbedICCProfile\ImageEmbedICCProfile.csproj", "{74C32226-7701-46C4-A3EE-79FBF97F5A25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageExport", "Images\ImageExport\ImageExport.csproj", "{381E8A0C-9523-40F6-B0A1-26D7378737D1}"
@@ -334,6 +336,10 @@ Global
 		{16ABC796-99B8-AEC6-947E-3355E8E6B090}.Debug|x64.Build.0 = Debug|x64
 		{16ABC796-99B8-AEC6-947E-3355E8E6B090}.Release|x64.ActiveCfg = Release|x64
 		{16ABC796-99B8-AEC6-947E-3355E8E6B090}.Release|x64.Build.0 = Release|x64
+		{7B383C18-C183-4549-A5BF-CC488A08DF52}.Debug|x64.ActiveCfg = Debug|x64
+		{7B383C18-C183-4549-A5BF-CC488A08DF52}.Debug|x64.Build.0 = Debug|x64
+		{7B383C18-C183-4549-A5BF-CC488A08DF52}.Release|x64.ActiveCfg = Release|x64
+		{7B383C18-C183-4549-A5BF-CC488A08DF52}.Release|x64.Build.0 = Release|x64
 		{74C32226-7701-46C4-A3EE-79FBF97F5A25}.Debug|x64.ActiveCfg = Debug|x64
 		{74C32226-7701-46C4-A3EE-79FBF97F5A25}.Debug|x64.Build.0 = Debug|x64
 		{74C32226-7701-46C4-A3EE-79FBF97F5A25}.Release|x64.ActiveCfg = Release|x64
