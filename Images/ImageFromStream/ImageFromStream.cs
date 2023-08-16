@@ -30,6 +30,7 @@ namespace ImageFromStream
 
                 String bitmapInput = Library.ResourceDirectory + "Sample_Input/Datalogics.bmp";
                 String jpegInput = Library.ResourceDirectory + "Sample_Input/ducky.jpg";
+                String pngOutput = "../ImageFromStream-out.png";
                 String docOutput = "../ImageFromStream-out2.pdf";
 
                 if (args.Length > 0)
@@ -60,7 +61,7 @@ namespace ImageFromStream
                 Datalogics.PDFL.Image BitmapImage = new Datalogics.PDFL.Image(BitmapStream);
 
                 // Save the image to a PNG file.
-                BitmapImage.Save("ImageFromStream-out.png", ImageType.PNG);
+                BitmapImage.Save(pngOutput, ImageType.PNG);
 
                 // The following demonstrates reading an image from a Stream and placing it into a document.
                 // First, create a new Document and add a Page to it.
