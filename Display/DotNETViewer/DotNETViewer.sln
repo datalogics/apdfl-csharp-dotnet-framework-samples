@@ -1,9 +1,13 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33328.57
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNETViewer", "DotNETViewer.csproj", "{66238892-38c6-40cf-b50c-3b9f8d449b80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNETViewer", "DotNETViewer.csproj", "{66238892-38C6-40CF-B50C-3B9F8D449B80}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4820C609-0261-4D9D-93AA-A231FA70151D} = {4820C609-0261-4D9D-93AA-A231FA70151D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNETViewerComponent", "..\DotNETViewerComponent\DotNETViewerComponent.csproj", "{4820C609-0261-4D9D-93AA-A231FA70151D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,14 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{66238892-38c6-40cf-b50c-3b9f8d449b80}.Debug|x64.ActiveCfg = Debug|x64
-		{66238892-38c6-40cf-b50c-3b9f8d449b80}.Debug|x64.Build.0 = Debug|x64
-		{66238892-38c6-40cf-b50c-3b9f8d449b80}.Release|x64.ActiveCfg = Release|x64
-		{66238892-38c6-40cf-b50c-3b9f8d449b80}.Release|x64.Build.0 = Release|x64
+		{66238892-38C6-40CF-B50C-3B9F8D449B80}.Debug|x64.ActiveCfg = Debug|x64
+		{66238892-38C6-40CF-B50C-3B9F8D449B80}.Debug|x64.Build.0 = Debug|x64
+		{66238892-38C6-40CF-B50C-3B9F8D449B80}.Release|x64.ActiveCfg = Release|x64
+		{66238892-38C6-40CF-B50C-3B9F8D449B80}.Release|x64.Build.0 = Release|x64
+		{4820C609-0261-4D9D-93AA-A231FA70151D}.Debug|x64.ActiveCfg = Debug|x64
+		{4820C609-0261-4D9D-93AA-A231FA70151D}.Debug|x64.Build.0 = Debug|x64
+		{4820C609-0261-4D9D-93AA-A231FA70151D}.Release|x64.ActiveCfg = Release|x64
+		{4820C609-0261-4D9D-93AA-A231FA70151D}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

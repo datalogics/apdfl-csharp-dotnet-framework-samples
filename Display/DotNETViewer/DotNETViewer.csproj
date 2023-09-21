@@ -68,5 +68,11 @@
       <Version>18.*</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNETViewerComponent\DotNETViewerComponent.csproj">
+      <Project>{4820c609-0261-4d9d-93aa-a231fa70151d}</Project>
+      <Name>DotNETViewerComponent</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
