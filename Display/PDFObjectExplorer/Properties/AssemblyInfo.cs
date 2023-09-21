@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Datalogics, Inc.")]
 [assembly: AssemblyProduct("PDF Object Explorer")]
-[assembly: AssemblyCopyright("Copyright © Datalogics, Inc. 2008-2023")]
+[assembly: AssemblyCopyright("Copyright © Datalogics, Inc. 2008")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
