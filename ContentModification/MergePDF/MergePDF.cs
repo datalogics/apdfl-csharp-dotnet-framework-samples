@@ -22,19 +22,15 @@ namespace MergePDF
 
             using (Library lib = new Library())
             {
-                // attachments.pdf -- contains 2 attachments, one regular, one attached to an annotation. doc.Attachments only returns 1
-                // merge_pdf2.pdf -- no attachments
-                // Portfolio1.pdf -- DL made portfolio with 2 PDFs - doc.Attachments returns 2
-
-                String sInput1 = Library.ResourceDirectory + "Sample_Input/mergepdf2.pdf";
-                String sMainPDF = "Attachments.pdf";
-                String sOutput = "MergePDF-outComplete.pdf";
+                String sInput1 = Library.ResourceDirectory + "Sample_Input/merge_pdf1.pdf";
+                String sInput2 = Library.ResourceDirectory + "Sample_Input/merge_pdf2.pdf";
+                String sOutput = "MergePDF-out.pdf";
 
                 if (args.Length > 0)
                     sInput1 = args[0];
 
                 if (args.Length > 1)
-                    sMainPDF = args[1];
+                    sInput2 = args[1];
 
                 if (args.Length > 2)
                     sOutput = args[2];
@@ -43,34 +39,29 @@ namespace MergePDF
                 {
                     try
                     {
-                        Document docMain = new Document(sMainPDF);
+                        Document docMain = new Document(sInput2);
 
-                        // Issue1: Don't try to get the attachments unless you know there is an attachment
                         IList<FileAttachment> attachments = doc1.Attachments;
                         Console.WriteLine("\nDocument " + sInput1 + " has " + attachments.Count + " attachments");
 
-                        if (doc1.Root.Contains("Names")) // 
+                        if (doc1.Root.Contains("Names"))
                         {
                             PDFDict names = (PDFDict)doc1.Root.Get("Names");
                             if (names.Contains("EmbeddedFiles"))
                             {
                                 IList<FileAttachment> attachmentsTemp = doc1.Attachments;
                                 Console.WriteLine("\nDocument " + sInput1 + " has " + attachmentsTemp.Count + " attachments");
-                                foreach (FileAttachment fileA in attachmentsTemp)
+                                foreach (FileAttachment file in attachmentsTemp)
                                 {
-                                    // Not all attachments are PDFs.
-                                    Console.WriteLine("Attachement is "+ fileA.FileName );
-                                    if (fileA.FileName.EndsWith(".pdf") )
-
+                                    Console.WriteLine("Attachement is "+ file.FileName );
+                                    if (file.FileName.EndsWith(".pdf") )
                                     {
-                                        // APDFL does not currently have a mechanism to convert the fileAttachment to a Document.
-                                        // Need to save to a temp file and then re-open?
-                                        fileA.SaveToFile("temp.pdf");
-                                        Document tempPDF = new Document("temp.pdf");
-                                        docMain.InsertPages(Document.LastPage, tempPDF, 0, Document.AllPages, PageInsertFlags.Bookmarks | PageInsertFlags.Threads |
-                                           PageInsertFlags.DoNotMergeFonts | PageInsertFlags.DoNotResolveInvalidStructureParentReferences | PageInsertFlags.DoNotRemovePageInheritance);
-                                        tempPDF.Close();
-                                        tempPDF.Dispose();                        
+                                        file.SaveToFile("temp.pdf");
+                                        using (Document tempPDF = new Document("temp.pdf"))
+                                        {
+                                            docMain.InsertPages(Document.LastPage, tempPDF, 0, Document.AllPages, PageInsertFlags.Bookmarks | PageInsertFlags.Threads |
+                                            PageInsertFlags.DoNotMergeFonts | PageInsertFlags.DoNotResolveInvalidStructureParentReferences | PageInsertFlags.DoNotRemovePageInheritance);
+                                        }
                                     }
                                 }
                             }
@@ -93,7 +84,6 @@ namespace MergePDF
                     {
                         Console.Out.WriteLine(ex.Message);
                     }
-
                 }
             }
         }
