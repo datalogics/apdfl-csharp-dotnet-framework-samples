@@ -1,6 +1,5 @@
 using System;
 using Datalogics.PDFL;
-using System.Collections.Generic;
 
 /*
  * 
@@ -18,7 +17,8 @@ namespace MergePDF
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("MergePDF with Attachments or Portfolio sample:");
+            Console.WriteLine("MergePDF Sample:");
+
 
             using (Library lib = new Library())
             {
@@ -35,58 +35,34 @@ namespace MergePDF
                 if (args.Length > 2)
                     sOutput = args[2];
 
+                Console.WriteLine("MergePDF: adding " + sInput1 + " and " + sInput2 + " and writing to " + sOutput);
+
                 using (Document doc1 = new Document(sInput1))
                 {
-                    try
+                    using (Document doc2 = new Document(sInput2))
                     {
-                        Document docMain = new Document(sInput2);
-
-                        IList<FileAttachment> attachments = doc1.Attachments;
-                        Console.WriteLine("\nDocument " + sInput1 + " has " + attachments.Count + " attachments");
-
-                        if (doc1.Root.Contains("Names"))
+                        try
                         {
-                            PDFDict names = (PDFDict)doc1.Root.Get("Names");
-                            if (names.Contains("EmbeddedFiles"))
-                            {
-                                IList<FileAttachment> attachmentsTemp = doc1.Attachments;
-                                Console.WriteLine("\nDocument " + sInput1 + " has " + attachmentsTemp.Count + " attachments");
-                                foreach (FileAttachment file in attachmentsTemp)
-                                {
-                                    Console.WriteLine("Attachement is "+ file.FileName );
-                                    if (file.FileName.EndsWith(".pdf") )
-                                    {
-                                        file.SaveToFile("temp.pdf");
-                                        using (Document tempPDF = new Document("temp.pdf"))
-                                        {
-                                            docMain.InsertPages(Document.LastPage, tempPDF, 0, Document.AllPages, PageInsertFlags.Bookmarks | PageInsertFlags.Threads |
-                                            PageInsertFlags.DoNotMergeFonts | PageInsertFlags.DoNotResolveInvalidStructureParentReferences | PageInsertFlags.DoNotRemovePageInheritance);
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine("Document does not have EmbeddedFiles entry in Names dict");
-                            }
+                            doc1.InsertPages(Document.LastPage, doc2, 0, Document.AllPages, PageInsertFlags.Bookmarks | PageInsertFlags.Threads |
+                                             // For best performance processing large documents, set the following flags.
+                                             PageInsertFlags.DoNotMergeFonts | PageInsertFlags.DoNotResolveInvalidStructureParentReferences | PageInsertFlags.DoNotRemovePageInheritance);
                         }
-                        else
+                        catch (LibraryException ex)
                         {
-                             Console.WriteLine("Document does not have Names entry in catalog");
+                            if (!ex.Message.Contains(
+                                "An incorrect structure tree was found in the PDF file but operation continued"))
+                            {
+                                throw;
+                            }
+
+                            Console.Out.WriteLine(ex.Message);
                         }
 
                         // For best performance processing large documents, set the following flags.
-                        Console.WriteLine("Saving to " + sOutput);
-                        docMain.Save(SaveFlags.Full | SaveFlags.SaveLinearizedNoOptimizeFonts | SaveFlags.Compressed, sOutput);
-
-                    }
-                    catch(LibraryException ex)
-                    {
-                        Console.Out.WriteLine(ex.Message);
+                        doc1.Save(SaveFlags.Full | SaveFlags.SaveLinearizedNoOptimizeFonts | SaveFlags.Compressed, sOutput);
                     }
                 }
             }
         }
     }
 }
-
