@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Datalogics.PDFL;
+using System;
 
 /*
  * This sample creates a PDF document with a single page, featuring a rectangle.
- * An action is added to the rectangle in the form of a hyperlink; if the reader
- * clicks on the rectangle, the system opens a Datalogics web page.
+ * An action is added to the rectangle in the form of a hyperlink; if the viewer
+ * clicks on the rectangle, it opens a Datalogics web page.
  *
  * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
@@ -17,11 +15,11 @@ namespace Actions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Actions Sample:");
+            Console.WriteLine("Action Sample:");
 
             using (Library lib = new Library())
             {
-                String sOutput = "../Actions-out.pdf";
+                String sOutput = "../Action-out.pdf";
 
                 Console.WriteLine("Initialized the library.");
                 
@@ -31,8 +29,7 @@ namespace Actions
                 {
                     // Create a PDF page which is the same size of the image.
                     Rect pageRect = new Rect(0, 0, 100, 100);
-                    Page docpage = doc.CreatePage(Document.BeforeFirstPage,
-                        pageRect);
+                    Page docpage = doc.CreatePage(Document.BeforeFirstPage, pageRect);
                     Console.WriteLine("Created page.");
 
                     // Create our first link with a URI action
@@ -40,7 +37,7 @@ namespace Actions
                     Console.WriteLine(newLink.ToString());
 
                     doc.BaseURI = "http://www.datalogics.com";
-                    URIAction uri = new URIAction("/products/pdf/pdflibrary/", false);
+                    URIAction uri = new URIAction("/adobe-pdf-library/", false);
                     Console.WriteLine("Action data: " + uri.ToString());
 
                     newLink.Action = uri;
@@ -71,13 +68,12 @@ namespace Actions
                     uri.IsMap = true;
 
                     Console.WriteLine("Complete changed URI:" + doc.BaseURI + uri.URI);
- 
+
                     if (uri.IsMap)
                         Console.WriteLine("Send mouse coordinates");
                     else
                         Console.WriteLine("Don't send mouse coordinates");
 
-                    // Testing gta
                     Console.WriteLine("Fit type of destination: " + gta.Destination.FitType.ToString());
                     Console.WriteLine("Rectangle of destination: " + gta.Destination.DestRect.ToString());
                     Console.WriteLine("Zoom of destination: " + gta.Destination.Zoom.ToString());
