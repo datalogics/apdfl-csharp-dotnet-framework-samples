@@ -1786,7 +1786,7 @@ namespace DotNETViewerComponent
                 CircleAnnotation ann = page.GetAnnotation(expectedIndex) as CircleAnnotation;
 
                 // checking properties
-                Debug.Assert(ann.Width == 3);
+                Debug.Assert(ann.BorderStyleWidth == 3);
                 Debug.Assert(ann.Color.Equals(new Datalogics.PDFL.Color(0, 0, 0)));
                 Debug.Assert(ann.InteriorColor.Equals(new Datalogics.PDFL.Color(1, 0, 0)));
                 ann = null;
@@ -1808,7 +1808,7 @@ namespace DotNETViewerComponent
                 ActiveAnnotation = null;
                 ann = page.GetAnnotation(expectedIndex) as CircleAnnotation;
                 // checking properties
-                Debug.Assert(ann.Width == 5);
+                Debug.Assert(ann.BorderStyleWidth == 5);
                 Debug.Assert(ann.Color.Equals(new Datalogics.PDFL.Color(1, 0, 1)));
                 Debug.Assert(ann.InteriorColor.Equals(new Datalogics.PDFL.Color(0, 1, 1)));
                 ann = null;
@@ -1845,7 +1845,7 @@ namespace DotNETViewerComponent
                 PolygonAnnotation ann = page.GetAnnotation(expectedIndex) as PolygonAnnotation;
 
                 // checking properties
-                Debug.Assert(ann.Width == 3);
+                Debug.Assert(ann.BorderStyleWidth == 3);
                 Debug.Assert(ann.Color.Equals(new Datalogics.PDFL.Color(0, 0, 0)));
                 Debug.Assert(ann.InteriorColor.Equals(new Datalogics.PDFL.Color(1, 0, 0)));
                 Debug.Assert(ann.Vertices.Count == 3);
@@ -1868,7 +1868,7 @@ namespace DotNETViewerComponent
                 ActiveAnnotation = null;
                 ann = page.GetAnnotation(expectedIndex) as PolygonAnnotation;
                 // checking properties
-                Debug.Assert(ann.Width == 5);
+                Debug.Assert(ann.BorderStyleWidth == 5);
                 Debug.Assert(ann.Color.Equals(new Datalogics.PDFL.Color(1, 0, 1)));
                 Debug.Assert(ann.InteriorColor.Equals(new Datalogics.PDFL.Color(0, 1, 1)));
                 Debug.Assert(ann.Vertices.Count == 3);
@@ -2051,7 +2051,7 @@ namespace DotNETViewerComponent
                 Debug.Assert(page.GetAnnotation(expectedIndex).Subtype == "Ink");
                 InkAnnotation ann = page.GetAnnotation(expectedIndex) as InkAnnotation;
                 Debug.Assert(ann.Color.Equals(new Datalogics.PDFL.Color(0, 0, 1)));
-                Debug.Assert(ann.Width == 2);
+                Debug.Assert(ann.BorderStyleWidth == 2);
                 Debug.Assert(ann.NumScribbles == 2);
                 Debug.Assert(ann.GetScribble(0).Count == 300);
                 Debug.Assert(ann.GetScribble(1).Count == 300);
@@ -2127,7 +2127,7 @@ namespace DotNETViewerComponent
                 LinkAnnotation ann = page.GetAnnotation(expectedIndex) as LinkAnnotation;
 
                 // checking properties
-                Debug.Assert(ann.Width == 3);
+                Debug.Assert(ann.BorderStyleWidth == 3);
                 Debug.Assert(ann.Color.Equals(new Datalogics.PDFL.Color(0, 0, 0)));
                 GoToAction action = ann.Action as GoToAction;
                 Debug.Assert(action.Destination.FitType == "XYZ");
@@ -2152,7 +2152,7 @@ namespace DotNETViewerComponent
                 ActiveAnnotation = null;
                 ann = page.GetAnnotation(expectedIndex) as LinkAnnotation;
                 // checking properties
-                Debug.Assert(ann.Width == 5);
+                Debug.Assert(ann.BorderStyleWidth == 5);
                 Debug.Assert(ann.Color.Equals(new Datalogics.PDFL.Color(1, 0, 1)));
                 action = ann.Action as GoToAction;
                 Debug.Assert(action.Destination.FitType == "XYZ");
