@@ -153,9 +153,7 @@ namespace DotNETViewerComponent
 
                     drawParams.UpdateRect = updateRect;
                     drawParams.SmoothFlags = SmoothFlags.Image | SmoothFlags.LineArt | SmoothFlags.Text;
-                    // If we use 'DrawFlags.OptimizeForInteractive' here, we also have to set the same
-                    // flag in the 'ImageArray2DManager.cs', function 'PageCache::Create(...)'.
-                    drawParams.Flags = DrawFlags.UseAnnotFaces | DrawFlags.OptimizeForInteractive;
+                    drawParams.Flags = DrawFlags.UseAnnotFacese;
 
 #if DRAWWITHBITMAPS
                     drawParams.Matrix = matrix;
