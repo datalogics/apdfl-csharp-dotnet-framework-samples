@@ -58,10 +58,8 @@ namespace DotNETViewerComponent
                 return new Tile();
             }
             DrawParams drawParams = new DrawParams();
-            // If we use 'DrawFlags.OptimizeForInteractive' here, we also have
-            // to set the same flag in the 'DotNETPrintController.cs', function
-            // 'DotNETPrintController::printDocument_PrintPage'.
-            drawParams.Flags = DrawFlags.UseAnnotFaces | DrawFlags.DoLazyErase | DrawFlags.OptimizeForInteractive;
+
+            drawParams.Flags = DrawFlags.UseAnnotFaces | DrawFlags.DoLazyErase;
             drawParams.SmoothFlags = SmoothFlags.LineArt | SmoothFlags.Text | SmoothFlags.Image;
             drawParams.BypassCopyPerm = false;
             drawParams.OptionalContentContext = occ;
