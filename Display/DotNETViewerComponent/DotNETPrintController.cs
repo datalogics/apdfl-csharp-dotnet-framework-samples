@@ -153,7 +153,7 @@ namespace DotNETViewerComponent
 
                     drawParams.UpdateRect = updateRect;
                     drawParams.SmoothFlags = SmoothFlags.Image | SmoothFlags.LineArt | SmoothFlags.Text;
-                    drawParams.Flags = DrawFlags.UseAnnotFacese;
+                    drawParams.Flags = DrawFlags.UseAnnotFaces;
 
 #if DRAWWITHBITMAPS
                     drawParams.Matrix = matrix;
