@@ -1,0 +1,10 @@
+name: test-samples
+
+on:
+    pull_request:
+    push:
+        branches: [ develop, main ]
+
+jobs:
+    build-and-run-samples:
+        runs-on: windows-latest
