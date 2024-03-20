@@ -84,7 +84,6 @@ jobs:
               'OpticalCharacterRecognition/AddTextToImage/',
               'Other/MemoryFileSystem/',
               'Other/StreamIO/',
-              'Other/WebApplication/',
               'Printing/PrintPDF/',
               'Printing/PrintPDFGUI/',
               'Security/AddRegexRedaction/',
@@ -123,11 +122,11 @@ jobs:
             run: |
               sample_name=$(basename "$PWD")
               echo "Installing NuGet packages..."
-              nuget.exe restore $sample_name.sln
+              nuget.exe restore $sample_name.csproj
 
           - name: Build samples
             working-directory: ${{ matrix.dir }}
             run: |
               sample_name=$(basename "$PWD")
               echo "Building $sample_name sample..."
-              msbuild.exe $sample_name.sln //p:Configuration=Release
+              msbuild.exe $sample_name.csproj //p:Configuration=Release
