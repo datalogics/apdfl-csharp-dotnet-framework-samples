@@ -129,4 +129,4 @@ jobs:
             run: |
               sample_name=$(basename "$PWD")
               echo "Building $sample_name sample..."
-              msbuild.exe $sample_name.csproj //p:Configuration=Release
+              msbuild.exe $sample_name.csproj //p:Configuration=Release //p:Platform=x64
