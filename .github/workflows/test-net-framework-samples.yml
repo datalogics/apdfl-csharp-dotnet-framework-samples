@@ -115,6 +115,16 @@ jobs:
           - name: Print PATH variable
             run: echo $PATH
 
+          - name: Setup NuGet.exe
+            uses: nuget/setup-nuget@v2
+
+          - name: Install NuGet packages
+            working-directory: ${{ matrix.dir }}
+            run: |
+              sample_name=$(basename "$PWD")
+              echo "Installing NuGet packages..."
+              nuget.exe restore $sample_name.sln
+
           - name: Build samples
             working-directory: ${{ matrix.dir }}
             run: |
