@@ -142,3 +142,9 @@ jobs:
               else
                 msbuild.exe $sample_name.csproj //p:Configuration=Release //p:Platform=x64
               fi
+
+          - name: Run samples
+            working-directory: ${{ matrix.dir }}
+            run: |
+              sample_name=$(basename "$PWD")
+              bin/Release/$sample_name.exe
