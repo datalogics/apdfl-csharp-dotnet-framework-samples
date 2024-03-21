@@ -147,4 +147,9 @@ jobs:
             working-directory: ${{ matrix.dir }}
             run: |
               sample_name=$(basename "$PWD")
-              bin/Release/$sample_name.exe
+
+              if [ "$sample_name" != "PrintPDF" ] && [ "$sample_name" != "PrintPDFGUI" ]; then
+                bin/Release/$sample_name.exe
+              else
+                echo "$sample_name will not be run due to GitHub runner limitations."
+              fi
