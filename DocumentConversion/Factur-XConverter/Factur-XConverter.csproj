@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <ProjectGuid>{D5F40E4D-BDEF-4472-909A-C6441B594750}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FacturXConverter</RootNamespace>
-    <AssemblyName>FacturXConverter</AssemblyName>
+    <RootNamespace>Factur-XConverter</RootNamespace>
+    <AssemblyName>Factur-XConverter</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
