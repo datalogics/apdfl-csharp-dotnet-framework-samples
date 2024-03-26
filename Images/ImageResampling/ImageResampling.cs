@@ -78,7 +78,7 @@ namespace ImageResampling
                 Console.WriteLine("Initialized the library.");
 
                 String sInput = Library.ResourceDirectory + "Sample_Input/ducky.pdf";
-                String sOutput = "../ImageResampling-out.pdf";
+                String sOutput = "ImageResampling-out.pdf";
 
                 if (args.Length > 0)
                     sInput = args[0];

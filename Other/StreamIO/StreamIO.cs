@@ -120,8 +120,8 @@ namespace StreamIO
             {
 
                 String sInput = Library.ResourceDirectory + "Sample_Input/sample.pdf";
-                String sOutput1 =  "../StreamIO-out1.pdf";
-                String sOutput2 = "../StreamIO-out2.pdf";
+                String sOutput1 =  "StreamIO-out1.pdf";
+                String sOutput2 = "StreamIO-out2.pdf";
 
                 if (args.Length > 0)
                     sInput = args[0];

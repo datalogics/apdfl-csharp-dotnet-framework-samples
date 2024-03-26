@@ -23,7 +23,7 @@ namespace GradientShade
             {
                 Console.WriteLine("Initialized the library.");
 
-                String sOutput = "../GradientShade-out.pdf";
+                String sOutput = "GradientShade-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];

@@ -19,7 +19,7 @@ namespace Actions
 
             using (Library lib = new Library())
             {
-                String sOutput = "../Action-out.pdf";
+                String sOutput = "Action-out.pdf";
 
                 Console.WriteLine("Initialized the library.");
                 

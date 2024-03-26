@@ -7,8 +7,8 @@ using Datalogics.PDFL;
  *
  * This program shows how to add annotations to an existing PDF file that will highlight and underline words.
  * When you run it, the program generates a PDF output file. The output sample annotates a PDF file showing
- * a National Weather Service web page, highlighting the word “Cloudy” wherever it appears and underlining
- * the word “Rain.”
+ * a National Weather Service web page, highlighting the word ï¿½Cloudyï¿½ wherever it appears and underlining
+ * the word ï¿½Rain.ï¿½
  * 
  * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
  *
@@ -26,7 +26,7 @@ namespace UnderlinesAndHighlights
                 Console.WriteLine("Initialized the library.");
 
                 String sInput = Library.ResourceDirectory + "Sample_Input/sample.pdf";
-                String sOutput = "../UnderlinesAndHighlights-out.pdf";
+                String sOutput = "UnderlinesAndHighlights-out.pdf";
 
                 if (args.Length > 0)
                     sInput = args[0];

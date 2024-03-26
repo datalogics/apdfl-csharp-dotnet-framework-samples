@@ -25,7 +25,7 @@ namespace PDFXConverter
                 Console.WriteLine("Initialized the library.");
 
                 String sInput = Library.ResourceDirectory + "Sample_Input/sample.pdf";
-                String sOutput = "../PDFXConverter-out.pdf";
+                String sOutput = "PDFXConverter-out.pdf";
 
                 if (args.Length > 0)
                     sInput = args[0];

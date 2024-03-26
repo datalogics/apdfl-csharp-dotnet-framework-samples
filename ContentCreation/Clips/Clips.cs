@@ -24,7 +24,7 @@ namespace Clips
             {
                 Console.WriteLine("Initialized the library.");
 
-                String sOutput = "../Clips-out.pdf";
+                String sOutput = "Clips-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];

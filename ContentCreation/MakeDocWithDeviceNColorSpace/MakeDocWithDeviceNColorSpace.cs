@@ -18,7 +18,7 @@ namespace MakeDocWithDeviceNColorSpace
         {
             using (Library lib = new Library())
             {
-                String sOutput = "../DeviceN-out.pdf";
+                String sOutput = "DeviceN-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];

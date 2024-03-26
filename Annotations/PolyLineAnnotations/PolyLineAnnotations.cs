@@ -24,7 +24,7 @@ namespace PolyLineAnnotations
             {
                 Console.WriteLine("Initialized the library.");
 
-                String sOutput = "../PolyLineAnnotations-out.pdf";
+                String sOutput = "PolyLineAnnotations-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];
