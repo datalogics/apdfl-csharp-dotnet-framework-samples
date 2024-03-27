@@ -6,7 +6,7 @@ using Datalogics.PDFL;
 /*
  * 
  * This program describes how to render text from top to bottom on a page.  The program provides
- * a WritingMode �Vertical� with a string of Unicode characters to present sample text. 
+ * a WritingMode "Vertical" with a string of Unicode characters to present sample text.
  * 
  * The sample offers several rows of Unicode characters. The sample PDF file thus presents multiple columns
  * of vertical text.  The characters appear in English as well as Mandarin, Japanese, and Korean.

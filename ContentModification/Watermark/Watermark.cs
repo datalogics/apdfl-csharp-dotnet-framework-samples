@@ -8,7 +8,7 @@ using Datalogics.PDFL;
  * 
  * The Watermark sample program shows how to create a watermark and copy it to a new PDF file.
  * You could use this code to create a message to apply to PDF files you select, like
- * �Confidential� or �Draft Copy.� Or you might want to place a copyright statement over
+ * "Confidential" or "Draft Copy." Or you might want to place a copyright statement over
  * a set of photographs shown in a PDF file so that they cannot be easily duplicated without
  * the permission of the owner.
  * 
