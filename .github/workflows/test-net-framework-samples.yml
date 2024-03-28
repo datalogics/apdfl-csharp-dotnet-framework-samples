@@ -6,5 +6,183 @@ on:
         branches: [ develop, main ]
 
 jobs:
-    build-and-run-samples:
-        runs-on: windows-latest
+    test-samples:
+        runs-on: windows-2019
+        defaults:
+          run:
+            shell: bash
+        strategy:
+          fail-fast: false
+          matrix:
+            dir: [
+              'Annotations/Annotations/',
+              'Annotations/InkAnnotations/',
+              'Annotations/LinkAnnotation/',
+              'Annotations/PolygonAnnotations/',
+              'Annotations/PolyLineAnnotations/',
+              'ContentCreation/AddElements/',
+              'ContentCreation/AddHeaderFooter/',
+              'ContentCreation/Clips/',
+              'ContentCreation/CreateBookmarks/',
+              'ContentCreation/GradientShade/',
+              'ContentCreation/MakeDocWithCalGrayColorSpace/',
+              'ContentCreation/MakeDocWithCalRGBColorSpace/',
+              'ContentCreation/MakeDocWithDeviceNColorSpace/',
+              'ContentCreation/MakeDocWithICCBasedColorSpace/',
+              'ContentCreation/MakeDocWithIndexedColorSpace/',
+              'ContentCreation/MakeDocWithLabColorSpace/',
+              'ContentCreation/MakeDocWithSeparationColorSpace/',
+              'ContentCreation/NameTrees/',
+              'ContentCreation/NumberTrees/',
+              'ContentCreation/RemoteGoToActions/',
+              'ContentCreation/WriteNChannelTiff/',
+              'ContentModification/Action/',
+              'ContentModification/AddCollection/',
+              'ContentModification/ChangeLayerConfiguration/',
+              'ContentModification/ChangeLinkColors/',
+              'ContentModification/CreateLayer/',
+              'ContentModification/ExtendedGraphicStates/',
+              'ContentModification/FlattenTransparency/',
+              'ContentModification/LaunchActions/',
+              'ContentModification/MergePDF/',
+              'ContentModification/PageLabels/',
+              'ContentModification/PDFObject/',
+              'ContentModification/UnderlinesAndHighlights/',
+              'ContentModification/Watermark/',
+              'Display/DisplayPDF/',
+              'Display/DotNETViewer/',
+              'Display/DotNETViewerComponent/',
+              'Display/PDFObjectExplorer/',
+              'DocumentConversion/ColorConvertDocument/',
+              'DocumentConversion/ConvertToOffice/',
+              'DocumentConversion/CreateDocFromXPS/',
+              'DocumentConversion/Factur-XConverter/',
+              'DocumentConversion/PDFAConverter/',
+              'DocumentConversion/PDFXConverter/',
+              'DocumentConversion/ZUGFeRDConverter/',
+              'DocumentOptimization/PDFOptimize/',
+              'Images/DocToImages/',
+              'Images/DrawSeparations/',
+              'Images/DrawToBitmap/',
+              'Images/EPSSeparations/',
+              'Images/GetSeparatedImages/',
+              'Images/ImageEmbedICCProfile/',
+              'Images/ImageExport/',
+              'Images/ImageExtraction/',
+              'Images/ImageFromStream/',
+              'Images/ImageImport/',
+              'Images/ImageResampling/',
+              'Images/ImageSoftMask/',
+              'Images/OutputPreview/',
+              'Images/RasterizePage/',
+              'InformationExtraction/ListBookmarks/',
+              'InformationExtraction/ListInfo/',
+              'InformationExtraction/ListLayers/',
+              'InformationExtraction/ListPaths/',
+              'InformationExtraction/Metadata/',
+              'OpticalCharacterRecognition/AddTextToDocument/',
+              'OpticalCharacterRecognition/AddTextToImage/',
+              'Other/MemoryFileSystem/',
+              'Other/StreamIO/',
+              'Printing/PrintPDF/',
+              'Printing/PrintPDFGUI/',
+              'Security/AddRegexRedaction/',
+              'Security/Redactions/',
+              'Text/AddGlyphs/',
+              'Text/AddUnicodeText/',
+              'Text/AddVerticalText/',
+              'Text/ExtractAcroFormFieldData/',
+              'Text/ExtractCJKTextByPatternMatch/',
+              'Text/ExtractTextByPatternMatch/',
+              'Text/ExtractTextByRegion/',
+              'Text/ExtractTextFromAnnotations/',
+              'Text/ExtractTextFromMultiRegions/',
+              'Text/ExtractTextPreservingStyleAndPositionInfo/',
+              'Text/ListWords/',
+              'Text/RegexExtractText/',
+              'Text/RegexTextSearch/',
+              'Text/TextExtract/'
+            ]
+
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+
+          - name: Add msbuild to PATH
+            uses: microsoft/setup-msbuild@v2
+
+          - name: Print PATH variable
+            run: echo $PATH
+
+          - name: Setup NuGet.exe
+            uses: nuget/setup-nuget@v2
+
+          - name: Install NuGet packages
+            working-directory: ${{ matrix.dir }}
+            run: |
+              sample_name=$(basename "$PWD")
+              echo "Installing NuGet packages..."
+
+              if [ "$sample_name" == "DotNETViewer" ]; then
+                nuget.exe restore ../DotNETViewerComponent/DotNETViewerComponent.csproj
+                nuget.exe restore $sample_name.csproj
+              else
+                nuget.exe restore $sample_name.csproj
+              fi
+
+          - name: Build samples
+            working-directory: ${{ matrix.dir }}
+            run: |
+              sample_name=$(basename "$PWD")
+              echo "Building $sample_name sample..."
+
+              if [ "$sample_name" == "DotNETViewer" ]; then
+                msbuild.exe ../DotNETViewerComponent/DotNETViewerComponent.csproj //p:Configuration=Release //p:Platform=x64
+                msbuild.exe $sample_name.csproj //p:Configuration=Release //p:Platform=x64
+              else
+                msbuild.exe $sample_name.csproj //p:Configuration=Release //p:Platform=x64
+              fi
+
+          - name: Run samples
+            working-directory: ${{ matrix.dir }}
+            run: |
+              sample_name=$(basename "$PWD")
+
+              if [ "$sample_name" != "PrintPDF" ] && [ "$sample_name" != "PrintPDFGUI" ] && [ "$sample_name" != "DisplayPDF" ] && [ "$sample_name" != "DotNETViewer" ] &&  [ "$sample_name" != "DotNETViewerComponent" ] &&  [ "$sample_name" != "PDFObjectExplorer" ]; then
+                if [ "$sample_name" == "DocToImages" ]; then
+                  bin/Release/$sample_name.exe -format=png $HOME/.nuget/packages/adobe.pdf.library.sampleinput/1.0.0/build/Resources/Sample_Input/ducky.pdf
+                else
+                  bin/Release/$sample_name.exe
+                fi
+              else
+                echo "$sample_name will not be run due to GitHub runner limitations."
+              fi
+
+          - name: Set sample_name variable
+            id: set-sample-name
+            working-directory: ${{matrix.dir}}
+            run: echo "SAMPLE_NAME=$(basename "$PWD")" >> "$GITHUB_ENV"
+
+          - name: Save artifacts
+            uses: actions/upload-artifact@v4
+            with:
+              name: output-${{ env.SAMPLE_NAME }}
+              path: |
+                ${{matrix.dir}}*.docx
+                ${{matrix.dir}}*.xslx
+                ${{matrix.dir}}*.pptx
+                ${{matrix.dir}}*.pdf
+                ${{matrix.dir}}*.tif
+                ${{matrix.dir}}*.png
+                ${{matrix.dir}}*.jpg
+                ${{matrix.dir}}*.eps
+                ${{matrix.dir}}*.tiff
+                ${{matrix.dir}}*.bmp
+                ${{matrix.dir}}*.gif
+                ${{matrix.dir}}*.json
+                ${{matrix.dir}}*.txt
+                ${{matrix.dir}}*.csv
+
+          - name: List files
+            run: |
+              ls ${{matrix.dir}}

@@ -31,9 +31,9 @@ namespace FlattenTransparency
             {
 
                 String sInput1 = Library.ResourceDirectory + "Sample_Input/trans_1page.pdf";
-                String sOutput1 =  "../FlattenTransparency-out1.pdf";
+                String sOutput1 =  "FlattenTransparency-out1.pdf";
                 String sInput2 = Library.ResourceDirectory + "Sample_Input/trans_multipage.pdf";
-                String sOutput2 =  "../FlattenTransparency-out2.pdf";
+                String sOutput2 =  "FlattenTransparency-out2.pdf";
 
                 if (args.Length > 0)
                     sInput1 = args[0];
