@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
-    <ProjectGuid>{D5F40E4D-BDEF-4472-909A-C6441B594750}</ProjectGuid>
+    <ProjectGuid>{C5493EAE-45F6-4502-9D26-5BFEC574729F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Factur-XConverter</RootNamespace>
-    <AssemblyName>Factur-XConverter</AssemblyName>
+    <RootNamespace>AddQRCode</RootNamespace>
+    <AssemblyName>AddQRCode</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factur-XConverter.cs" />
+    <Compile Include="AddQRCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

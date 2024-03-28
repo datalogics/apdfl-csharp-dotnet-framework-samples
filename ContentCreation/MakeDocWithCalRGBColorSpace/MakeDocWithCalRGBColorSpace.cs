@@ -19,7 +19,7 @@ namespace MakeDocWithCalRGBColorSpace
         {
             using (Library lib = new Library())
             {
-                String sOutput = "../CalRGB-out.pdf";
+                String sOutput = "CalRGB-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];

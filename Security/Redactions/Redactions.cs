@@ -23,8 +23,8 @@ namespace Redactions
             {
                 Console.WriteLine("Initialized the library.");
                 String sInput = Library.ResourceDirectory + "Sample_Input/sample.pdf";
-                String sOutput1 = "../Redactions-out.pdf";
-                String sOutput2 = "../Redactions-out-applied.pdf";
+                String sOutput1 = "Redactions-out.pdf";
+                String sOutput2 = "Redactions-out-applied.pdf";
 
                 if (args.Length > 0)
                     sInput = args[0];

@@ -30,8 +30,8 @@ namespace ImageFromStream
 
                 String bitmapInput = Library.ResourceDirectory + "Sample_Input/Datalogics.bmp";
                 String jpegInput = Library.ResourceDirectory + "Sample_Input/ducky.jpg";
-                String pngOutput = "../ImageFromStream-out.png";
-                String docOutput = "../ImageFromStream-out2.pdf";
+                String pngOutput = "ImageFromStream-out.png";
+                String docOutput = "ImageFromStream-out2.pdf";
 
                 if (args.Length > 0)
                     bitmapInput = args[0];

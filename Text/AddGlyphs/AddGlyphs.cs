@@ -23,7 +23,7 @@ namespace AddGlyphs
             {
                 Console.WriteLine("Initialized the library.");
 
-                String sOutput = "../AddGlyphs-out.pdf";
+                String sOutput = "AddGlyphs-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];

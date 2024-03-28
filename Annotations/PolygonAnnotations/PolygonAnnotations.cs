@@ -24,7 +24,7 @@ namespace PolygonAnnotations
             {
                 Console.WriteLine("Initialized the library.");
 
-                String sOutput = "../PolygonAnnotations-out.pdf";
+                String sOutput = "PolygonAnnotations-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];

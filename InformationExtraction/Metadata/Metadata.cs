@@ -24,7 +24,7 @@ namespace Metadata
 
                 String sInput1 = Library.ResourceDirectory + "Sample_Input/sample.pdf";
                 String sInput2 = Library.ResourceDirectory + "Sample_Input/Ducky_with_metadata.pdf";
-                String sOutput = "../sample-metadata-out.pdf";
+                String sOutput = "sample-metadata-out.pdf";
 
                 if (args.Length > 0)
                     sInput1 = args[0];

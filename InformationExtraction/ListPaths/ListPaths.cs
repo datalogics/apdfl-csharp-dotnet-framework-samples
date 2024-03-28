@@ -17,7 +17,7 @@ namespace ListPaths
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ListLayers Sample:");
+            Console.WriteLine("ListPaths Sample:");
 
             using (Library lib = new Library())
             {

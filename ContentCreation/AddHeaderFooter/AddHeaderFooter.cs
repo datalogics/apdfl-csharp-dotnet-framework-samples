@@ -26,7 +26,7 @@ namespace AddHeaderFooter
             {
                 Console.WriteLine("Initialized the library.");
 
-                String sOutput = "../AddHeaderFooter-out.pdf";
+                String sOutput = "AddHeaderFooter-out.pdf";
 
                 Console.WriteLine("Output file: " + sOutput);
 

@@ -111,7 +111,7 @@ namespace RegexExtractText
                 Console.WriteLine("Initialized the library.");
 
                 String sInput = Library.ResourceDirectory + "Sample_Input/RegexExtractText.pdf";
-                String sOutput = "../RegexExtractText-out.json";
+                String sOutput = "RegexExtractText-out.json";
 
                 // Uncomment only one regular expression you are interested in seeing the match information of (as a JSON file).
                 // Phone numbers
