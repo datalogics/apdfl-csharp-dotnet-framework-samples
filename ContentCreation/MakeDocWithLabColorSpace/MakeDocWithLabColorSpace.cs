@@ -22,7 +22,7 @@ namespace MakeDocWithLabColorSpace
             using (Library lib = new Library())
             {
 
-                String sOutput = "../Lab-out.pdf";
+                String sOutput = "Lab-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];

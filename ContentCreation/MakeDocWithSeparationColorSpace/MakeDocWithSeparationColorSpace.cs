@@ -19,7 +19,7 @@ namespace MakeDocWithSeparationColorSpace
             using (Library lib = new Library())
             {
 
-                String sOutput = "../Separation-out.pdf";
+                String sOutput = "Separation-out.pdf";
 
                 if (args.Length > 0)
                     sOutput = args[0];

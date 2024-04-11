@@ -11,7 +11,7 @@ using Datalogics.PDFL;
  * This sample demonstrates drawing a list of grayscale separations from a PDF file to multi-paged TIFF file.
  *
  * 
- * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
+ * Copyright (c) 2007-2024, Datalogics, Inc. All rights reserved.
  *
  */
 
@@ -24,7 +24,7 @@ namespace GetSeparatedImages
             Console.WriteLine("GetSeparatedImages Sample:");
 
             String sInput = Library.ResourceDirectory + "Sample_Input/ducky.pdf";
-            String sOutput = "../GetSeparatedImages-out.tiff";
+            String sOutput = "GetSeparatedImages-out.tiff";
 
             if (args.Length > 0)
                 sInput = args[0];
@@ -52,6 +52,7 @@ namespace GetSeparatedImages
                 }
 
                 PageImageParams pip = new PageImageParams();
+                pip.PageDrawFlags = DrawFlags.UseAnnotFaces;
                 pip.HorizontalResolution = 300;
                 pip.VerticalResolution = 300;
 
