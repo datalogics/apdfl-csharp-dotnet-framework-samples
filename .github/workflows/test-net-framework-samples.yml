@@ -88,6 +88,7 @@ jobs:
               'InformationExtraction/Metadata/',
               'OpticalCharacterRecognition/AddTextToDocument/',
               'OpticalCharacterRecognition/AddTextToImage/',
+              'OpticalCharacterRecognition/OCRDocument/',
               'Other/MemoryFileSystem/',
               'Other/StreamIO/',
               'Printing/PrintPDF/',
