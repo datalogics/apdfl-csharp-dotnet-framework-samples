@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WebApplication")]
+[assembly: AssemblyTitle("OCRDocument")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Datalogics, Inc.")]
-[assembly: AssemblyProduct("WebApplication")]
-[assembly: AssemblyCopyright("Copyright © 2012-2023 Datalogics, Inc.")]
+[assembly: AssemblyProduct("OCRDocument")]
+[assembly: AssemblyCopyright("Copyright © Datalogics 2019-2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b0dbb2ae-e756-47ed-a91e-4d576a5a16fe")]
+[assembly: Guid("a1a2f184-6250-4843-8d6b-3a72776dd27d")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,7 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

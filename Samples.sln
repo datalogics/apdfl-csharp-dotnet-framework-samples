@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clips", "ContentCreation\Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateBookmarks", "ContentCreation\CreateBookmarks\CreateBookmarks.csproj", "{157F72BC-DCD4-496B-A5EE-FC50AADAFA3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradientShade", "ContentCreation\GradientShade\GradientShade.csproj", "{64dbb1f8-8ccf-40ec-8eb1-dde0b3586595}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeDocWithCalGrayColorSpace", "ContentCreation\MakeDocWithCalGrayColorSpace\MakeDocWithCalGrayColorSpace.csproj", "{6D9CDBE3-17B7-4337-BD9D-DAA378791244}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeDocWithCalRGBColorSpace", "ContentCreation\MakeDocWithCalRGBColorSpace\MakeDocWithCalRGBColorSpace.csproj", "{7017DD83-4988-4F4E-92A8-20F747D571BD}"
@@ -46,6 +48,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Action", "ContentModificati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddCollection", "ContentModification\AddCollection\AddCollection.csproj", "{BEC20051-FF71-42FA-B46A-0909ECE10765}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddQRCode", "ContentModification\AddQRCode\AddQRCode.csproj", "{C5493EAE-45F6-4502-9D26-5BFEC574729F}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeLayerConfiguration", "ContentModification\ChangeLayerConfiguration\ChangeLayerConfiguration.csproj", "{C5493EAE-45F6-4502-9D26-5BFEC574729F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeLinkColors", "ContentModification\ChangeLinkColors\ChangeLinkColors.csproj", "{8781C73F-6EAD-4D0B-AAAE-37D5A6E4BC86}"
@@ -68,13 +72,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderlinesAndHighlights", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMark", "ContentModification\Watermark\WaterMark.csproj", "{FA83DE47-3771-47EE-8EA8-EB202F5241A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayPDF", "Display\DisplayPDF\DisplayPDF.csproj", "{02A72B29-33C8-4BE7-A577-9688439A710D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNETViewer", "Display\DotNETViewer\DotNETViewer.csproj", "{66238892-38C6-40CF-B50C-3B9F8D449B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNETViewerComponent", "Display\DotNETViewerComponent\DotNETViewerComponent.csproj", "{4820C609-0261-4D9D-93AA-A231FA70151D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFObjectExplorer", "Display\PDFObjectExplorer\PDFObjectExplorer.csproj", "{B4F2E320-7125-4D31-8AB8-302CC4D82E79}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorConvertDocument", "DocumentConversion\ColorConvertDocument\ColorConvertDocument.csproj", "{D0E85D80-0332-40F2-A9DB-43C02F4544BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertToOffice", "DocumentConversion\ConvertToOffice\ConvertToOffice.csproj", "{AECC2C27-D343-4E42-9097-121AFAA4B386}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDocFromXPS", "DocumentConversion\CreateDocFromXPS\CreateDocFromXPS.csproj", "{6A1D00B1-DA53-4BB5-B7F7-1EB1339C379B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factur-XConverter", "DocumentConversion\Factur-XConverter\Factur-XConverter.csproj", "{D5F40E4D-BDEF-4472-909A-C6441B594750}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFAConverter", "DocumentConversion\PDFAConverter\PDFAConverter.csproj", "{6E7363CC-D687-43A0-A6F6-7E408B06446B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFXConverter", "DocumentConversion\PDFXConverter\PDFXConverter.csproj", "{AC0B6462-750A-4DF6-BB63-29878969670D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZUGFeRDConverter", "DocumentConversion\ZUGFeRDConverter\ZUGFeRDConverter.csproj", "{7e090b4f-0db4-4c40-a48a-40c0111019d5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFOptimize", "DocumentOptimization\PDFOptimize\PDFOptimize.csproj", "{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}"
 EndProject
@@ -87,8 +105,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPSSeparations", "Images\EPSSeparations\EPSSeparations.csproj", "{9C2C13DB-2E5C-4E6A-96C9-5C1004F1410E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSeparatedImages", "Images\GetSeparatedImages\GetSeparatedImages.csproj", "{16ABC796-99B8-AEC6-947E-3355E8E6B090}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputPreview", "Images\OutputPreview\OutputPreview.csproj", "{7B383C18-C183-4549-A5BF-CC488A08DF52}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageEmbedICCProfile", "Images\ImageEmbedICCProfile\ImageEmbedICCProfile.csproj", "{74C32226-7701-46C4-A3EE-79FBF97F5A25}"
 EndProject
@@ -104,6 +120,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageResampling", "Images\I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageSoftMask", "Images\ImageSoftMask\ImageSoftMask.csproj", "{B521056A-B3B0-43C1-8374-1FD66DE7F1BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputPreview", "Images\OutputPreview\OutputPreview.csproj", "{7B383C18-C183-4549-A5BF-CC488A08DF52}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasterizePage", "Images\RasterizePage\RasterizePage.csproj", "{A96AB9D0-86A5-4ADF-A222-BC91924BC5FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListBookmarks", "InformationExtraction\ListBookmarks\ListBookmarks.csproj", "{BEF227A8-326C-4CDE-B2FA-41DEA3BC378C}"
@@ -116,6 +134,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListPaths", "InformationExt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metadata", "InformationExtraction\Metadata\Metadata.csproj", "{61313430-5B85-4600-A2AE-5B61C138D70D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTextToDocument", "OpticalCharacterRecognition\AddTextToDocument\AddTextToDocument.csproj", "{F69F3E92-2388-4702-813C-CE25CCB3FAEC}
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTextToImage", "OpticalCharacterRecognition\AddTextToImage\AddTextToImage.csproj", "{a1a2f184-6250-4843-8d6b-3a72776dd27d}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCRDocument", "OpticalCharacterRecognition\OCRDocument\OCRDocument.csproj", "{C9DD37F3-545F-4346-8EF2-FAE2DD20FDCF}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryFileSystem", "Other\MemoryFileSystem\MemoryFileSystem.csproj", "{81EFB00E-32B7-48F1-9BFC-D17253D52148}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamIO", "Other\StreamIO\StreamIO.csproj", "{38DF6203-BFFF-4C5C-AAA8-ECCE6F08EEE3}"
@@ -123,6 +147,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPDF", "Printing\PrintPDF\PrintPDF.csproj", "{E71D73AD-6972-409C-860F-AA055B126DB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPDFGUI", "Printing\PrintPDFGUI\PrintPDFGUI.csproj", "{12C14641-90FA-4982-B03F-4E25C3D03256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddRegexRedaction", "Security\AddRegexRedaction\AddRegexRedaction.csproj", "{547F12BC-E6F0-4395-B1CC-EA5AE2900990}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redactions", "Security\Redactions\Redactions.csproj", "{3790CE63-DB43-4F16-8226-BDFEFA25BCDD}"
 EndProject
@@ -132,32 +158,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddUnicodeText", "Text\AddU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddVerticalText", "Text\AddVerticalText\AddVerticalText.csproj", "{09F9D4AC-3BED-45C5-9325-F33A7F898F06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListWords", "Text\ListWords\ListWords.csproj", "{7801882E-1CF5-49C4-A4FE-34ED5F4901E5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextExtract", "Text\TextExtract\TextExtract.csproj", "{11C4A647-3DDA-41A5-855C-E14EDF1BFFDE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexTextSearch", "Text\RegexTextSearch\RegexTextSearch.csproj", "{FA30AB74-525F-42BC-BF43-B07AD7C94BC1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddRegexRedaction", "Security\AddRegexRedaction\AddRegexRedaction.csproj", "{547F12BC-E6F0-4395-B1CC-EA5AE2900990}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexExtractText", "Text\RegexExtractText\RegexExtractText.csproj", "{6712DB77-75AB-4E71-BF38-05BD698A1A2C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextByRegion", "Text\ExtractTextByRegion\ExtractTextByRegion.csproj", "{4E8C26AF-67B3-48CF-9A5F-E83E5EFD3498}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextByPatternMatch", "Text\ExtractTextByPatternMatch\ExtractTextByPatternMatch.csproj", "{7F947745-7A22-4CCB-8B38-E16A1E780819}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextFromMultiRegions", "Text\ExtractTextFromMultiRegions\ExtractTextFromMultiRegions.csproj", "{301D53BD-5506-4040-8E77-6C260A4AB0A2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractAcroFormFieldData", "Text\ExtractAcroFormFieldData\ExtractAcroFormFieldData.csproj", "{AFDE3185-80DA-4EF9-8DE5-7E6E80F396A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractCJKTextByPatternMatch", "Text\ExtractCJKTextByPatternMatch\ExtractCJKTextByPatternMatch.csproj", "{990A5B2F-B22D-49AA-840F-712CAFBEDC71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextByPatternMatch", "Text\ExtractTextByPatternMatch\ExtractTextByPatternMatch.csproj", "{7F947745-7A22-4CCB-8B38-E16A1E780819}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextByRegion", "Text\ExtractTextByRegion\ExtractTextByRegion.csproj", "{4E8C26AF-67B3-48CF-9A5F-E83E5EFD3498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextFromAnnotations", "Text\ExtractTextFromAnnotations\ExtractTextFromAnnotations.csproj", "{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextFromMultiRegions", "Text\ExtractTextFromMultiRegions\ExtractTextFromMultiRegions.csproj", "{301D53BD-5506-4040-8E77-6C260A4AB0A2}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextPreservingStyleAndPositionInfo", "Text\ExtractTextPreservingStyleAndPositionInfo\ExtractTextPreservingStyleAndPositionInfo.csproj", "{6D01CAFD-C868-4F75-9B88-6EC1074F7AE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factur-XConverter", "DocumentConversion\Factur-XConverter\Factur-XConverter.csproj", "{D5F40E4D-BDEF-4472-909A-C6441B594750}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListWords", "Text\ListWords\ListWords.csproj", "{7801882E-1CF5-49C4-A4FE-34ED5F4901E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertToOffice", "DocumentConversion\ConvertToOffice\ConvertToOffice.csproj", "{AECC2C27-D343-4E42-9097-121AFAA4B386}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexExtractText", "Text\RegexExtractText\RegexExtractText.csproj", "{6712DB77-75AB-4E71-BF38-05BD698A1A2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexTextSearch", "Text\RegexTextSearch\RegexTextSearch.csproj", "{FA30AB74-525F-42BC-BF43-B07AD7C94BC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextExtract", "Text\TextExtract\TextExtract.csproj", "{11C4A647-3DDA-41A5-855C-E14EDF1BFFDE}"
+EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -200,6 +223,10 @@ Global
 		{157F72BC-DCD4-496B-A5EE-FC50AADAFA3F}.Debug|x64.Build.0 = Debug|x64
 		{157F72BC-DCD4-496B-A5EE-FC50AADAFA3F}.Release|x64.ActiveCfg = Release|x64
 		{157F72BC-DCD4-496B-A5EE-FC50AADAFA3F}.Release|x64.Build.0 = Release|x64
+		{64dbb1f8-8ccf-40ec-8eb1-dde0b3586595}.Debug|x64.ActiveCfg = Debug|x64
+		{64dbb1f8-8ccf-40ec-8eb1-dde0b3586595}.Debug|x64.Build.0 = Debug|x64
+		{64dbb1f8-8ccf-40ec-8eb1-dde0b3586595}.Release|x64.ActiveCfg = Release|x64
+		{64dbb1f8-8ccf-40ec-8eb1-dde0b3586595}.Release|x64.Build.0 = Release|x64
 		{6D9CDBE3-17B7-4337-BD9D-DAA378791244}.Debug|x64.ActiveCfg = Debug|x64
 		{6D9CDBE3-17B7-4337-BD9D-DAA378791244}.Debug|x64.Build.0 = Debug|x64
 		{6D9CDBE3-17B7-4337-BD9D-DAA378791244}.Release|x64.ActiveCfg = Release|x64
@@ -248,6 +275,10 @@ Global
 		{3A7670C4-BE60-4AE8-8E79-8281206BB4DA}.Debug|x64.Build.0 = Debug|x64
 		{3A7670C4-BE60-4AE8-8E79-8281206BB4DA}.Release|x64.ActiveCfg = Release|x64
 		{3A7670C4-BE60-4AE8-8E79-8281206BB4DA}.Release|x64.Build.0 = Release|x64
+		{C5493EAE-45F6-4502-9D26-5BFEC574729F}.Debug|x64.ActiveCfg = Debug|x64
+		{C5493EAE-45F6-4502-9D26-5BFEC574729F}.Debug|x64.Build.0 = Debug|x64
+		{C5493EAE-45F6-4502-9D26-5BFEC574729F}.Release|x64.ActiveCfg = Release|x64
+		{C5493EAE-45F6-4502-9D26-5BFEC574729F}.Release|x64.Build.0 = Release|x64
 		{BEC20051-FF71-42FA-B46A-0909ECE10765}.Debug|x64.ActiveCfg = Debug|x64
 		{BEC20051-FF71-42FA-B46A-0909ECE10765}.Debug|x64.Build.0 = Debug|x64
 		{BEC20051-FF71-42FA-B46A-0909ECE10765}.Release|x64.ActiveCfg = Release|x64
@@ -296,6 +327,22 @@ Global
 		{FA83DE47-3771-47EE-8EA8-EB202F5241A0}.Debug|x64.Build.0 = Debug|x64
 		{FA83DE47-3771-47EE-8EA8-EB202F5241A0}.Release|x64.ActiveCfg = Release|x64
 		{FA83DE47-3771-47EE-8EA8-EB202F5241A0}.Release|x64.Build.0 = Release|x64
+		{02A72B29-33C8-4BE7-A577-9688439A710D}.Debug|x64.ActiveCfg = Debug|x64
+		{02A72B29-33C8-4BE7-A577-9688439A710D}.Debug|x64.Build.0 = Debug|x64
+		{02A72B29-33C8-4BE7-A577-9688439A710D}.Release|x64.ActiveCfg = Release|x64
+		{02A72B29-33C8-4BE7-A577-9688439A710D}.Release|x64.Build.0 = Release|x64
+		{66238892-38C6-40CF-B50C-3B9F8D449B80}.Debug|x64.ActiveCfg = Debug|x64
+		{66238892-38C6-40CF-B50C-3B9F8D449B80}.Debug|x64.Build.0 = Debug|x64
+		{66238892-38C6-40CF-B50C-3B9F8D449B80}.Release|x64.ActiveCfg = Release|x64
+		{66238892-38C6-40CF-B50C-3B9F8D449B80}.Release|x64.Build.0 = Release|x64
+		{4820C609-0261-4D9D-93AA-A231FA70151D}.Debug|x64.ActiveCfg = Debug|x64
+		{4820C609-0261-4D9D-93AA-A231FA70151D}.Debug|x64.Build.0 = Debug|x64
+		{4820C609-0261-4D9D-93AA-A231FA70151D}.Release|x64.ActiveCfg = Release|x64
+		{4820C609-0261-4D9D-93AA-A231FA70151D}.Release|x64.Build.0 = Release|x64
+		{B4F2E320-7125-4D31-8AB8-302CC4D82E79}.Debug|x64.ActiveCfg = Debug|x64
+		{B4F2E320-7125-4D31-8AB8-302CC4D82E79}.Debug|x64.Build.0 = Debug|x64
+		{B4F2E320-7125-4D31-8AB8-302CC4D82E79}.Release|x64.ActiveCfg = Release|x64
+		{B4F2E320-7125-4D31-8AB8-302CC4D82E79}.Release|x64.Build.0 = Release|x64
 		{D0E85D80-0332-40F2-A9DB-43C02F4544BC}.Debug|x64.ActiveCfg = Debug|x64
 		{D0E85D80-0332-40F2-A9DB-43C02F4544BC}.Debug|x64.Build.0 = Debug|x64
 		{D0E85D80-0332-40F2-A9DB-43C02F4544BC}.Release|x64.ActiveCfg = Release|x64
@@ -312,6 +359,10 @@ Global
 		{AC0B6462-750A-4DF6-BB63-29878969670D}.Debug|x64.Build.0 = Debug|x64
 		{AC0B6462-750A-4DF6-BB63-29878969670D}.Release|x64.ActiveCfg = Release|x64
 		{AC0B6462-750A-4DF6-BB63-29878969670D}.Release|x64.Build.0 = Release|x64
+		{7e090b4f-0db4-4c40-a48a-40c0111019d5}.Debug|x64.ActiveCfg = Debug|x64
+		{7e090b4f-0db4-4c40-a48a-40c0111019d5}.Debug|x64.Build.0 = Debug|x64
+		{7e090b4f-0db4-4c40-a48a-40c0111019d5}.Release|x64.ActiveCfg = Release|x64
+		{7e090b4f-0db4-4c40-a48a-40c0111019d5}.Release|x64.Build.0 = Release|x64
 		{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}.Debug|x64.ActiveCfg = Debug|x64
 		{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}.Debug|x64.Build.0 = Debug|x64
 		{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}.Release|x64.ActiveCfg = Release|x64
@@ -392,6 +443,18 @@ Global
 		{61313430-5B85-4600-A2AE-5B61C138D70D}.Debug|x64.Build.0 = Debug|x64
 		{61313430-5B85-4600-A2AE-5B61C138D70D}.Release|x64.ActiveCfg = Release|x64
 		{61313430-5B85-4600-A2AE-5B61C138D70D}.Release|x64.Build.0 = Release|x64
+		{F69F3E92-2388-4702-813C-CE25CCB3FAEC}.Debug|x64.ActiveCfg = Debug|x64
+		{F69F3E92-2388-4702-813C-CE25CCB3FAEC}.Debug|x64.Build.0 = Debug|x64
+		{F69F3E92-2388-4702-813C-CE25CCB3FAEC}.Release|x64.ActiveCfg = Release|x64
+		{F69F3E92-2388-4702-813C-CE25CCB3FAEC}.Release|x64.Build.0 = Release|x64
+		{a1a2f184-6250-4843-8d6b-3a72776dd27d}.Debug|x64.ActiveCfg = Debug|x64
+		{a1a2f184-6250-4843-8d6b-3a72776dd27d}.Debug|x64.Build.0 = Debug|x64
+		{a1a2f184-6250-4843-8d6b-3a72776dd27d}.Release|x64.ActiveCfg = Release|x64
+		{a1a2f184-6250-4843-8d6b-3a72776dd27d}.Release|x64.Build.0 = Release|x64
+		{C9DD37F3-545F-4346-8EF2-FAE2DD20FDCF}.Debug|x64.ActiveCfg = Debug|x64
+		{C9DD37F3-545F-4346-8EF2-FAE2DD20FDCF}.Debug|x64.Build.0 = Debug|x64
+		{C9DD37F3-545F-4346-8EF2-FAE2DD20FDCF}.Release|x64.ActiveCfg = Release|x64
+		{C9DD37F3-545F-4346-8EF2-FAE2DD20FDCF}.Release|x64.Build.0 = Release|x64
 		{81EFB00E-32B7-48F1-9BFC-D17253D52148}.Debug|x64.ActiveCfg = Debug|x64
 		{81EFB00E-32B7-48F1-9BFC-D17253D52148}.Debug|x64.Build.0 = Debug|x64
 		{81EFB00E-32B7-48F1-9BFC-D17253D52148}.Release|x64.ActiveCfg = Release|x64
@@ -452,6 +515,10 @@ Global
 		{7F947745-7A22-4CCB-8B38-E16A1E780819}.Debug|x64.Build.0 = Debug|x64
 		{7F947745-7A22-4CCB-8B38-E16A1E780819}.Release|x64.ActiveCfg = Release|x64
 		{7F947745-7A22-4CCB-8B38-E16A1E780819}.Release|x64.Build.0 = Release|x64
+		{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}.Debug|x64.ActiveCfg = Debug|x64
+		{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}.Debug|x64.Build.0 = Debug|x64
+		{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}.Release|x64.ActiveCfg = Release|x64
+		{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}.Release|x64.Build.0 = Release|x64
 		{301D53BD-5506-4040-8E77-6C260A4AB0A2}.Debug|x64.ActiveCfg = Debug|x64
 		{301D53BD-5506-4040-8E77-6C260A4AB0A2}.Debug|x64.Build.0 = Debug|x64
 		{301D53BD-5506-4040-8E77-6C260A4AB0A2}.Release|x64.ActiveCfg = Release|x64
