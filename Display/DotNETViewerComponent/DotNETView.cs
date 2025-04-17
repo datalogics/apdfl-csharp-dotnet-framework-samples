@@ -906,33 +906,36 @@ namespace DotNETViewerComponent
                     bool letter = false;
                     Quad q = null;
                     IList<Quad> charQuads = word.CharQuads;
-                    for (int i = 0; i < text.Length; ++i)
+                    if (charQuads.Count == text.Length)
                     {
-                        if (char.IsLetter(text, i) != letter)
+                        for (int i = 0; i < text.Length; ++i)
                         {
-                            if (q != null) quads.Add(q);
-                            q = null;
-                            letter = !letter;
-                        }
-                        if (q == null)
-                        {
-                            q = Utils.Clone(charQuads[i]);
-                        }
-                        else // check distance between quads - if we can concat them or not
-                        {
-                            const double interval = 0.5;
-                            if (q.BottomRight.H + interval < charQuads[i].BottomLeft.H)
+                            if (char.IsLetter(text, i) != letter)
                             {
-                                quads.Add(q);
+                                if (q != null) quads.Add(q);
+                                q = null;
+                                letter = !letter;
+                            }
+                            if (q == null)
+                            {
                                 q = Utils.Clone(charQuads[i]);
                             }
-                            else
+                            else // check distance between quads - if we can concat them or not
                             {
-                                q = Concat(q, charQuads[i]);
+                                const double interval = 0.5;
+                                if (q.BottomRight.H + interval < charQuads[i].BottomLeft.H)
+                                {
+                                    quads.Add(q);
+                                    q = Utils.Clone(charQuads[i]);
+                                }
+                                else
+                                {
+                                    q = Concat(q, charQuads[i]);
+                                }
                             }
                         }
                     }
-                    if (q != null) quads.Add(q);
+                        if (q != null) quads.Add(q);
                 }
             }
             if (quads.Count > 0) return quads;
