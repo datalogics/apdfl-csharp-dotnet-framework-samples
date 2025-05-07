@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
-    <ProjectGuid>{3790CE63-DB43-4F16-8226-BDFEFA25BCDD}</ProjectGuid>
+    <ProjectGuid>{AB753937-DF3D-4B06-B475-D3B597D32BC5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>AddDigitalSignature</RootNamespace>
     <AssemblyName>AddDigitalSignature</AssemblyName>
