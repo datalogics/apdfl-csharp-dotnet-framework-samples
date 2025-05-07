@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
-    <ProjectGuid>{C5493EAE-45F6-4502-9D26-5BFEC574729F}</ProjectGuid>
+    <ProjectGuid>{E2C4287F-5817-49CE-912D-9A9F29DBC0DD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ChangeLayerConfiguration</RootNamespace>
     <AssemblyName>ChangeLayerConfiguration</AssemblyName>

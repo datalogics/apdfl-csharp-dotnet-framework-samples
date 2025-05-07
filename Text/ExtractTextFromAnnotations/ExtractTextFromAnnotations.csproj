@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
-    <ProjectGuid>{05B2CC4F-FCF5-46B2-89FC-0B5ECCD061DF}</ProjectGuid>
+    <ProjectGuid>{28F740D7-D28F-458F-A9A4-903CC1310558}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ExtractTextFromAnnotations</RootNamespace>
     <AssemblyName>ExtractTextFromAnnotations</AssemblyName>
