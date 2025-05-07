@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
-    <ProjectGuid>{a1a2f184-6250-4843-8d6b-3a72776dd27d}</ProjectGuid>
+    <ProjectGuid>{7B949A55-4748-4B93-A9D7-AE6555648A79}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>AddTextToImage</RootNamespace>
     <AssemblyName>AddTextToImage</AssemblyName>
