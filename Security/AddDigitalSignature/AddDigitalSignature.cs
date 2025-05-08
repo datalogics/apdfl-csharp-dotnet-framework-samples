@@ -57,7 +57,7 @@ namespace AddDigitalSignature
 
                         // Setup the signer information
                         // (Logo image is optional)
-                        sigDoc.SetSignerInfo(sOutput, 0.5F, "John Doe", "Chicago, IL", "Approval", "Datalogics, Inc.",
+                        sigDoc.SetSignerInfo(sLogo, 0.5F, "John Doe", "Chicago, IL", "Approval", "Datalogics, Inc.",
                             DisplayTraits.KDisplayAll);
 
                         // Set the size and location of the signature box (optional)
