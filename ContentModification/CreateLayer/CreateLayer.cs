@@ -44,7 +44,7 @@ namespace CreateLayer
                         Image image = (Image)pg.Content.GetElement(0);
                         image.Matrix = new Matrix(image.Matrix.A * .5, 0, 0, image.Matrix.D * .5, image.Matrix.H, image.Matrix.V);
 
-                        Image image2 = new Image(Library.ResourceDirectory + "Sample_Input/image.png");
+                        Image image2 = new Image(Library.ResourceDirectory + "Sample_Input/Image.png");
 
                         Text text = new Text();
                         Matrix matrix = new Matrix();
