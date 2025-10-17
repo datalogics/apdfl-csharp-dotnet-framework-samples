@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
-    <ProjectGuid>{AB753937-DF3D-4B06-B475-D3B597D32BC5}</ProjectGuid>
+    <ProjectGuid>{74FA984E-AB89-475A-9077-9D612DE12AEC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AddDigitalSignature</RootNamespace>
-    <AssemblyName>AddDigitalSignature</AssemblyName>
+    <RootNamespace>AddDigitalSignatureRFC3161</RootNamespace>
+    <AssemblyName>AddDigitalSignatureRFC3161</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddDigitalSignature.cs" />
+    <Compile Include="AddDigitalSignatureRFC3161.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -12,7 +12,7 @@ on:
 
 jobs:
     test-samples:
-        runs-on: windows-2019
+        runs-on: windows-2022
         defaults:
           run:
             shell: bash
@@ -93,7 +93,8 @@ jobs:
               'Other/StreamIO/',
               'Printing/PrintPDF/',
               'Printing/PrintPDFGUI/',
-              'Security/AddDigitalSignature/',
+              'Security/AddDigitalSignatureCMS/',
+              'Security/AddDigitalSignatureRFC3161/',
               'Security/AddRegexRedaction/',
               'Security/Redactions/',
               'Text/AddGlyphs/',
