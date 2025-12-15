@@ -9,7 +9,7 @@ using Datalogics.PDFL;
  * one per page. You can also create a mult-page TIFF file. This program requires that you enter 
  * formatting values manually at the command line. 
  *
- * Copyright (c) 2007-2023, Datalogics, Inc. All rights reserved.
+ * Copyright (c) 2007-2025, Datalogics, Inc. All rights reserved.
  *
  */
 
@@ -422,7 +422,7 @@ namespace DocToImages
             Console.WriteLine("-grayhalftone = [n|y] - is a grayscale image halftone? Only valid for format=tif and color=gray.");
             Console.WriteLine("-first=[y|n] Only convert the first PDFL page, default=n");
             Console.WriteLine("-quality=1-100. Only valid for an output type of jpg, default for jpg is 75");
-            Console.WriteLine("resolution=[horiz x vert] ( target DPI, [12-1200], default=300");
+            Console.WriteLine("-resolution=[horiz x vert] ( target DPI, [12-1200], default=300");
             Console.WriteLine("\tA single value sets both horizontal and vertical the same.");
             Console.WriteLine("\tex: resolution=300 -or - resolution=480x640");
             Console.WriteLine("-fontlist=\"dir1;dir2;dirN\"");
