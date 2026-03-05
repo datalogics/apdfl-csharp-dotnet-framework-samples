@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddBasicPAdESElectronicSignature", "AddBasicPAdESElectronicSignature.csproj", "{C7DF1472-B78F-402E-8841-52D2CB2B4725}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Debug|x64.ActiveCfg = Debug|x64
+		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Debug|x64.Build.0 = Debug|x64
+		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Release|x64.ActiveCfg = Release|x64
+		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1320D004-1376-4D4F-BFD2-A33DC360756F}
+	EndGlobalSection
+EndGlobal

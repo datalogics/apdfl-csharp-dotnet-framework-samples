@@ -93,6 +93,7 @@ jobs:
               'Other/StreamIO/',
               'Printing/PrintPDF/',
               'Printing/PrintPDFGUI/',
+              'Security/AddBasicPAdESElectronicSignature/',
               'Security/AddDigitalSignatureCMS/',
               'Security/AddDigitalSignatureRFC3161/',
               'Security/AddRegexRedaction/',

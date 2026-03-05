@@ -180,6 +180,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexTextSearch", "Text\Reg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextExtract", "Text\TextExtract\TextExtract.csproj", "{11C4A647-3DDA-41A5-855C-E14EDF1BFFDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddBasicPAdESElectronicSignature", "Security\AddBasicPAdESElectronicSignature\AddBasicPAdESElectronicSignature.csproj", "{C7DF1472-B78F-402E-8841-52D2CB2B4725}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddDigitalSignatureCMS", "Security\AddDigitalSignatureCMS\AddDigitalSignatureCMS.csproj", "{AB753937-DF3D-4B06-B475-D3B597D32BC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddDigitalSignatureRFC3161", "Security\AddDigitalSignatureRFC3161\AddDigitalSignatureRFC3161.csproj", "{74FA984E-AB89-475A-9077-9D612DE12AEC}"
@@ -554,6 +556,10 @@ Global
 		{74FA984E-AB89-475A-9077-9D612DE12AEC}.Debug|x64.Build.0 = Debug|x64
 		{74FA984E-AB89-475A-9077-9D612DE12AEC}.Release|x64.ActiveCfg = Release|x64
 		{74FA984E-AB89-475A-9077-9D612DE12AEC}.Release|x64.Build.0 = Release|x64
+		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Debug|x64.ActiveCfg = Debug|x64
+		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Debug|x64.Build.0 = Debug|x64
+		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Release|x64.ActiveCfg = Release|x64
+		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
