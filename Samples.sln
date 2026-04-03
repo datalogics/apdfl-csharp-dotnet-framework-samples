@@ -186,6 +186,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddDigitalSignatureCMS", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddDigitalSignatureRFC3161", "Security\AddDigitalSignatureRFC3161\AddDigitalSignatureRFC3161.csproj", "{74FA984E-AB89-475A-9077-9D612DE12AEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddPAdESPolicySignature", "Security\AddPAdESPolicySignature\AddPAdESPolicySignature.csproj", "{D4E8A2B1-6F3C-4D5E-9A7B-1C2D3E4F5A6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -560,6 +562,10 @@ Global
 		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Debug|x64.Build.0 = Debug|x64
 		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Release|x64.ActiveCfg = Release|x64
 		{C7DF1472-B78F-402E-8841-52D2CB2B4725}.Release|x64.Build.0 = Release|x64
+		{D4E8A2B1-6F3C-4D5E-9A7B-1C2D3E4F5A6B}.Debug|x64.ActiveCfg = Debug|x64
+		{D4E8A2B1-6F3C-4D5E-9A7B-1C2D3E4F5A6B}.Debug|x64.Build.0 = Debug|x64
+		{D4E8A2B1-6F3C-4D5E-9A7B-1C2D3E4F5A6B}.Release|x64.ActiveCfg = Release|x64
+		{D4E8A2B1-6F3C-4D5E-9A7B-1C2D3E4F5A6B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
