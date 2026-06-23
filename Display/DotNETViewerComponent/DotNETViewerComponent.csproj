@@ -339,7 +339,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <PackageReference Include="Adobe.PDF.Library.LM.NETFramework">
-      <Version>18.*</Version>
+      <Version>21.*</Version>
     </PackageReference>
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
