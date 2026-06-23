@@ -118,6 +118,17 @@ SKIP_RUN = {
 # FormsExtension LM .NETFramework, SampleInput). Internal raid share; reachable
 # only on the corporate network with SMB auth.
 NIGHTLY_PKG_DIR = r'\\ivy\raid\nuget-builder-samples-test'
+# Packages the .NET Framework samples need from the nightly drop: the LM
+# .NETFramework library, the Forms Extension LM .NETFramework library, and their
+# Adobe dependencies (SampleInput, Resources). The raid folder also holds the
+# .NET (Core), OCR, and SharedLibs packages, which these samples don't use, so we
+# skip them. (Newtonsoft.Json resolves from nuget.org.)
+NIGHTLY_PACKAGE_IDS = (
+    'Adobe.PDF.Library.LM.NETFramework',
+    'Adobe.PDF.Library.FormsExtension.LM.NETFramework',
+    'Adobe.PDF.Library.SampleInput',
+    'Adobe.PDF.Library.Resources',
+)
 # Public read-only feed. Required alongside the nightly folder because passing
 # -Source to nuget restore overrides the default feeds, and some samples pull
 # Newtonsoft.Json. Restore is download-only; nothing is published here.
@@ -145,9 +156,14 @@ def _sample_input(filename):
 
 
 def get_nightly_packages():
-    """Copy the nightly .nupkgs from the raid into the repo root for restore."""
-    pkgs = [os.path.join(NIGHTLY_PKG_DIR, f) for f in os.listdir(NIGHTLY_PKG_DIR)]
-    _copy_packages_locally(pkgs)
+    """Copy only the .NETFramework packages and their dependencies from the raid
+    into the repo root (skips the unrelated .NET/OCR/SharedLibs nupkgs)."""
+    wanted = [
+        os.path.join(NIGHTLY_PKG_DIR, f)
+        for f in os.listdir(NIGHTLY_PKG_DIR)
+        if f.endswith('.nupkg') and any(f.startswith(pid + '.') for pid in NIGHTLY_PACKAGE_IDS)
+    ]
+    _copy_packages_locally(wanted)
 
 
 @task
