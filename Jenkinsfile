@@ -34,6 +34,9 @@ pipeline {
                         values 'windows-dotnet-framework-samples'
                     }
                 }
+                environment {
+                    APDFL_KEY = credentials('apdfl-rlm-key')
+                }
                 stages {
                     stage('Axis'){
                         steps {

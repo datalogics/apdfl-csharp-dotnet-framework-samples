@@ -1,6 +1,7 @@
 from invoke import Collection, task
 from invoke.tasks import Task
 import glob
+import io
 import os
 import shutil
 
@@ -212,6 +213,7 @@ def build_samples(ctx, config='Debug'):
 @task
 def run_samples(ctx, config='Debug'):
     """Run each built sample's .exe, skipping GUI/printing/viewer samples."""
+    apdfl_key = os.environ.get('APDFL_KEY', '')
     for sample in samples_list:
         full_path = os.path.join(os.getcwd(), sample)
         sample_name = _sample_name(sample)
@@ -219,11 +221,11 @@ def run_samples(ctx, config='Debug'):
             print(f'{sample_name} will not be run (interactive/GUI/printing).')
             continue
         with ctx.cd(full_path):
-            exe = os.path.join('bin', config, f'{sample_name}.exe')
+            cmd = os.path.join('bin', config, f'{sample_name}.exe')
             if sample_name == 'DocToImages':
-                ctx.run(f'{exe} -format=png "{_sample_input("ducky.pdf")}"')
-            else:
-                ctx.run(exe)
+                cmd += f' -format=png "{_sample_input("ducky.pdf")}"'
+            # Key is supplied on stdin only, never in the echoed command.
+            ctx.run(cmd, in_stream=io.StringIO(apdfl_key + '\n'))
 
 
 tasks = []
