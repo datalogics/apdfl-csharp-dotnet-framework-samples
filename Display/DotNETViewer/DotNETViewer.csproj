@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Adobe.PDF.Library.LM.NETFramework">
-      <Version>18.*</Version>
+      <Version>21.*</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
