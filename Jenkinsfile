@@ -14,9 +14,7 @@ pipeline {
     }
     agent none
     triggers {
-        // .NET Framework samples are Windows-only. Run after the nuget-builder
-        // nightly (~05:00, ~20 min) has uploaded packages to the raid.
-        cron(env.BRANCH_NAME == "develop-21" ? 'H(0-30) 8 * * *' : '')
+        cron(env.BRANCH_NAME == "develop-21" ? '30 5 * * *' : '')
     }
     stages {
         stage('Matrix stage') {
