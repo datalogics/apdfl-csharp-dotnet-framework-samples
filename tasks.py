@@ -148,9 +148,11 @@ def _copy_packages_locally(packages):
 
 def _sample_input(filename):
     """Resolve a SampleInput resource (e.g. ducky.pdf) from the restored
-    Adobe.PDF.Library.SampleInput package in the NuGet global cache."""
-    cache = os.path.join(os.path.expanduser('~'), '.nuget', 'packages',
-                         'adobe.pdf.library.sampleinput')
+    Adobe.PDF.Library.SampleInput package in the NuGet global cache.
+    NUGET_PACKAGES relocates the cache (CI isolates it per job)."""
+    cache = os.environ.get('NUGET_PACKAGES') or os.path.join(
+        os.path.expanduser('~'), '.nuget', 'packages')
+    cache = os.path.join(cache, 'adobe.pdf.library.sampleinput')
     matches = glob.glob(os.path.join(cache, '*', 'build', 'Resources',
                                      'Sample_Input', filename))
     return matches[0] if matches else filename
