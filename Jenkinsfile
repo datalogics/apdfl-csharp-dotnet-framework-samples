@@ -1,5 +1,14 @@
 @Library('jenkins-shared-libraries') _
 def ENV_LOC=[:]
+
+// Per-job NuGet cache root, so concurrent jobs on a node don't contend for
+// the shared per-user cache. Rooted at the drive root (like setConanHome)
+// to keep restored package paths under the Windows long-path limit.
+def setNugetRoot() {
+    def jobDirectory = "DL\\" + env.JOB_NAME.tokenize('/')[-2] + "_" + env.JOB_BASE_NAME
+    return getWindowsRootDrive() + jobDirectory + "\\.nuget"
+}
+
 pipeline {
     parameters {
         choice(name: 'PLATFORM_FILTER', choices: ['all', 'windows-dotnet-framework-samples'], description: 'Run on specific platform')
@@ -36,6 +45,12 @@ pipeline {
                 }
                 environment {
                     APDFL_KEY = credentials('apdfl-rlm-key')
+                    // NuGet honors these for restore, msbuild, and
+                    // 'nuget locals all -clear' alike.
+                    NUGET_ROOT = setNugetRoot()
+                    NUGET_PACKAGES = "${NUGET_ROOT}\\packages"
+                    NUGET_HTTP_CACHE_PATH = "${NUGET_ROOT}\\http-cache"
+                    NUGET_PLUGINS_CACHE_PATH = "${NUGET_ROOT}\\plugins-cache"
                 }
                 stages {
                     stage('Axis'){
@@ -51,7 +66,10 @@ pipeline {
                         }
                         steps {
                             echo "Clean ${NODE}"
+                            // The NuGet cache root lives outside the workspace,
+                            // so git clean can't remove it.
                             bat """
+                                  if exist "%NUGET_ROOT%" rmdir /s /q "%NUGET_ROOT%"
                                   git rm -q -r .
                                   git reset --hard HEAD
                                   git clean -fdx
