@@ -129,6 +129,8 @@ NIGHTLY_PACKAGE_IDS = (
     'Adobe.PDF.Library.FormsExtension.LM.NETFramework',
     'Adobe.PDF.Library.SampleInput',
     'Adobe.PDF.Library.Resources',
+    'APDFL.OCR.Data.English',
+    'APDFL.OCR.Data.LatinScript',
 )
 # Public read-only feed. Required alongside the nightly folder because passing
 # -Source to nuget restore overrides the default feeds, and some samples pull
