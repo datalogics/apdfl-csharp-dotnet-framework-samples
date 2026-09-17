@@ -110,15 +110,15 @@ pipeline {
                             """
                         }
                     }
-                    stage('Build Samples') {
+                    stage('Build Samples using Nightly packages') {
                         steps {
                             echo "Build the samples ${NODE}"
                             bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
-                                  invoke build-samples
+                                  invoke build-samples --pkg-source Nightly
                             """
                         }
                     }
-                    stage('Run Samples') {
+                    stage('Run Samples using Nightly packages') {
                         steps {
                             echo "Run the samples ${NODE}"
                             bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
@@ -126,7 +126,40 @@ pipeline {
                             """
                         }
                     }
-                    stage('Clean Samples After Run') {
+                    stage('Clean Samples After Nightly Run') {
+                        steps {
+                            echo "Clean ${NODE}"
+                            bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
+                                  invoke clean-samples
+                            """
+                        }
+                    }
+                    stage('Clean Nuget Packages Before Public Build') {
+                        steps {
+                            echo "Clean ${NODE}"
+                            bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
+                                  invoke clean-nuget-packages
+                            """
+                        }
+                    }
+
+                    stage('Build Samples using Public packages') {
+                        steps {
+                            echo "Build the samples ${NODE}"
+                            bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
+                                  invoke build-samples --pkg-source Public
+                            """
+                        }
+                    }
+                    stage('Run Samples using Public packages') {
+                        steps {
+                            echo "Run the samples ${NODE}"
+                            bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
+                                  invoke run-samples
+                            """
+                        }
+                    }
+                    stage('Clean Samples After Public Run') {
                         steps {
                             echo "Clean ${NODE}"
                             bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
