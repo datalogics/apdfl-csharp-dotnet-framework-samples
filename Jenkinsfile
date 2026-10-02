@@ -79,11 +79,14 @@ pipeline {
                             echo "Set-Up Environment ${NODE}"
                             script {
                                 // Assumes the Python Launcher is installed on the Windows host.
-                                bat '.\\mkenv.py --verbose'
+                                // Invoke py.exe directly rather than relying on the .py file
+                                // association: a per-user association (e.g. one created by
+                                // Explorer's "Open with") can drop the script's arguments.
+                                bat 'py -3 mkenv.py --verbose'
                                 ENV_LOC[NODE] = bat (
                                     // The @ prevents Windows from echoing the command itself,
                                     // which would corrupt the returned value.
-                                    script: '@.\\mkenv.py --env-name',
+                                    script: '@py -3 mkenv.py --env-name',
                                     returnStdout: true
                                 ).trim()
                             }
