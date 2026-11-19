@@ -162,12 +162,21 @@ pipeline {
                             """
                         }
                     }
-                    stage('Clean Samples After Public Run') {
-                        steps {
-                            echo "Clean ${NODE}"
-                            bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
-                                  invoke clean-samples
-                            """
+                }
+                post {
+                    // Runs whether or not an earlier stage failed. Each sample's
+                    // bin holds its own copy of the APDFL runtime, so leaving them
+                    // behind after a failed build or run fills the node's disk
+                    // until the next job happens to clean them.
+                    cleanup {
+                        script {
+                            if (ENV_LOC[NODE]) {
+                                bat """CALL ${ENV_LOC[NODE]}\\Scripts\\activate
+                                      invoke clean-samples
+                                """
+                            } else {
+                                echo "No Python environment on ${NODE}, so nothing was built; skipping clean-samples"
+                            }
                         }
                     }
                 }
